@@ -6,6 +6,7 @@ from pathlib import Path
 
 import matplotlib as mpl
 import matplotlib.pyplot as plt
+from matplotlib.lines import Line2D
 import numpy as np
 import pandas as pd
 from scipy.stats import wilcoxon
@@ -70,7 +71,9 @@ def figure3():
         assert abs(final.loc[method, "sd_hv"] - sd) < 6e-5
 
     target = 1.141019
-    fig, (ax1, ax2) = plt.subplots(1, 2, figsize=(7.5, 3.65), gridspec_kw={"width_ratios": [1.72, 1]})
+    fig, (ax1, ax2) = plt.subplots(1, 2, figsize=(8.2, 3.7),
+                                  gridspec_kw={"width_ratios": [1.72, 1]},
+                                  constrained_layout=True)
     for method in methods:
         g = summary[summary.method.eq(method)]
         label = "Random search" if method == "Random" else method
@@ -79,8 +82,8 @@ def figure3():
         ax1.fill_between(g.evaluations, g.mean_hv-g.sd_hv, g.mean_hv+g.sd_hv,
                          color=COLORS[method], alpha=0.13, lw=0)
     ax1.axhline(target, color="#555555", ls="--", lw=0.9)
-    ax1.set_xlabel("Candidate evaluations", fontsize=11)
-    ax1.set_ylabel("Hypervolume", fontsize=11)
+    ax1.set_xlabel("Candidate evaluations", fontsize=11, fontweight="bold", labelpad=7)
+    ax1.set_ylabel("Hypervolume (HV)", fontsize=11, fontweight="bold", labelpad=8)
     ax1.set_xticks(checkpoints)
     ax1.tick_params(axis="x", rotation=45)
     ax1.legend(frameon=False, ncol=1, loc="lower right")
@@ -101,11 +104,11 @@ def figure3():
         ax2.hlines(mean, xpos-0.22, xpos+0.22, color="black", lw=1.8, zorder=4)
         ax2.text(xpos, 8, f"{reached.sum()}/15\n{mean:.1f}", ha="center", va="bottom", fontsize=9.5)
     ax2.set_xticks(range(3), ["NSGA-II", "NSGA-III", "Random"])
-    ax2.set_ylabel("Evaluations to target HV", fontsize=11)
+    ax2.set_xlabel("Search method", fontsize=11, fontweight="bold", labelpad=7)
+    ax2.set_ylabel("Evaluations to target", fontsize=11, fontweight="bold", labelpad=8)
     ax2.set_ylim(0, 300)
     ax2.text(0.01, 0.98, "(b)", transform=ax2.transAxes, va="top", fontweight="bold", fontsize=11)
     clean_axes(ax2)
-    fig.tight_layout(w_pad=1.2)
     save(fig, "fig_optimizer_convergence_budget")
 
     print("Final HV check")
@@ -136,28 +139,25 @@ def figure4():
     assert len(front) == 28 and counts == {"NSGA-II": 21, "NSGA-III": 2, "Random": 5}
     front.to_csv(TABLES / "pooled_nondominated_28.csv", index=False)
 
-    fig, axes = plt.subplots(1, 3, figsize=(7.5, 2.9))
     panels = [
-        ("parameters", "validation_macro_MAPE", "Trainable parameters", "Validation macro MAPE (%)", True, False),
-        ("latency_ms", "validation_macro_MAPE", "Inference latency (ms)", "Validation macro MAPE (%)", True, False),
-        ("parameters", "latency_ms", "Trainable parameters", "Inference latency (ms)", True, True),
+        ("parameters", "validation_macro_MAPE", "Trainable parameters", "Validation macro MAPE (%)", "fig4a_pareto_mape_parameters"),
+        ("latency_ms", "validation_macro_MAPE", "Inference latency (ms)", "Validation macro MAPE (%)", "fig4b_pareto_mape_latency"),
     ]
-    for idx, (ax, (x, y, xlabel, ylabel, logx, logy)) in enumerate(zip(axes, panels)):
+    for x, y, xlabel, ylabel, stem in panels:
+        fig, ax = plt.subplots(figsize=(4.6, 3.65), constrained_layout=True)
         ax.scatter(data[x], data[y], s=2.0, color="#bdbdbd", alpha=0.20, edgecolors="none", rasterized=True)
         for method in ["NSGA-II", "NSGA-III", "Random"]:
             g = data.loc[mask & data.method.eq(method)]
             label = "Random search" if method == "Random" else method
             ax.scatter(g[x], g[y], s=25, marker=MARKERS[method], color=COLORS[method],
                        edgecolor="#222222", lw=0.45, label=label, zorder=3)
-        if logx: ax.set_xscale("log")
-        if logy: ax.set_yscale("log")
-        ax.set_xlabel(xlabel, fontsize=10.5)
-        ax.set_ylabel(ylabel, fontsize=10.5)
-        ax.text(0.02, 0.98, f"({chr(97+idx)})", transform=ax.transAxes, va="top", fontweight="bold", fontsize=11)
+        ax.set_xscale("log")
+        ax.set_xlabel(xlabel, fontsize=11, fontweight="bold", labelpad=7)
+        ax.set_ylabel(ylabel, fontsize=11, fontweight="bold", labelpad=8)
         clean_axes(ax)
-    axes[1].legend(frameon=False, loc="upper right", handletextpad=0.3)
-    fig.tight_layout(w_pad=1.0)
-    save(fig, "fig_pooled_pareto_front")
+        ax.legend(frameon=False, loc="upper center", bbox_to_anchor=(0.5, 1.18), ncol=3,
+                  handletextpad=0.25, columnspacing=0.7, borderaxespad=0)
+        save(fig, stem)
     print("Total candidate rows:", len(data))
     print("Pooled nondominated points:", len(front))
     for method in ["NSGA-II", "NSGA-III", "Random"]: print(method, "contribution:", counts[method])
@@ -202,9 +202,11 @@ def figure5():
     ax.text(.57, 1.03, "Rank 2 → 1", color=highlight[r.feature_set], fontsize=9.5)
     ax.set_xlim(-.75, 1.28); ax.set_ylim(.5, 2.2)
     ax.set_xticks([0,1], ["Teacher forced", "Recursive rollout"])
-    ax.set_ylabel("Macro MAPE (%)", fontsize=11)
+    ax.tick_params(axis="x", pad=17)
+    for label in ax.get_xticklabels(): label.set_fontweight("bold")
+    ax.set_ylabel("Macro MAPE (%)", fontsize=11, fontweight="bold", labelpad=8)
     clean_axes(ax)
-    fig.tight_layout()
+    fig.subplots_adjust(left=.12, right=.88, top=.97, bottom=.22)
     save(fig, "fig_teacher_rollout_ablation")
     print(data.to_string(index=False))
 
@@ -235,21 +237,34 @@ def figure6():
                "bootstrap_resamples": 10000}
     (TABLES / "fig6_transfer_summary.json").write_text(json.dumps(summary, indent=2), encoding="utf-8")
 
-    fig, ax = plt.subplots(figsize=(7.5, 3.65))
+    fig, (ax, ax_mean) = plt.subplots(1, 2, figsize=(8.2, 3.8), sharey=True,
+                                     gridspec_kw={"width_ratios": [8.5, 1.2]},
+                                     constrained_layout=True)
     x=np.arange(1,41)
     colors=np.where(delta>=0,"#b2182b","#2166ac")
     ax.scatter(x,delta,c=colors,s=23,edgecolor="white",lw=.35,zorder=3)
     ax.axhline(0,color="#555555",lw=.9)
-    mean_x=43
-    ax.errorbar(mean_x,delta.mean(),yerr=[[delta.mean()-ci[0]],[ci[1]-delta.mean()]],fmt="D",
+    ax_mean.axhline(0,color="#555555",lw=.9)
+    ax_mean.errorbar(0,delta.mean(),yerr=[[delta.mean()-ci[0]],[ci[1]-delta.mean()]],fmt="D",
                 color="black",mfc="white",mec="black",ms=6,capsize=4,lw=1.2,zorder=4)
-    ax.text(mean_x,ci[1]+.7,f"Mean {delta.mean():+.2f}",ha="center",fontsize=9.5)
-    ax.text(.02,.96,rf"$n=40$; Wilcoxon $p={pvalue:.2e}$",transform=ax.transAxes,va="top",fontsize=9.5)
-    ax.set_xlim(0,45); ax.set_xticks([1,10,20,30,40,43],["1","10","20","30","40","Mean"])
-    ax.set_xlabel("External cells ordered by paired effect", fontsize=11)
-    ax.set_ylabel("Transfer − target-only capacity MAPE (pp)", fontsize=11)
+    ax_mean.text(0,ci[1]+.65,f"{delta.mean():+.2f}",ha="center",fontsize=10,fontweight="bold")
+    ax.set_xlim(0,41); ax.set_xticks([1,10,20,30,40])
+    ax.set_xlabel("External cells ordered by paired effect", fontsize=11, fontweight="bold", labelpad=7)
+    ax.set_ylabel("Paired MAPE difference (pp)", fontsize=11, fontweight="bold", labelpad=8)
+    ax_mean.set_xlim(-.8,.8); ax_mean.set_xticks([0],["Mean"])
+    ax_mean.tick_params(axis="x",pad=8)
+    for label in ax_mean.get_xticklabels(): label.set_fontweight("bold")
+    ax_mean.set_title("95% CI",fontsize=10,fontweight="bold",pad=7)
     clean_axes(ax)
-    fig.tight_layout()
+    clean_axes(ax_mean)
+    ax_mean.grid(False)
+    legend_handles = [
+        Line2D([0],[0],marker="o",linestyle="none",markerfacecolor="#b2182b",markeredgecolor="white",label="Negative transfer"),
+        Line2D([0],[0],marker="o",linestyle="none",markerfacecolor="#2166ac",markeredgecolor="white",label="Beneficial transfer"),
+        Line2D([0],[0],marker="D",linestyle="none",markerfacecolor="white",markeredgecolor="black",label="Mean and 95% CI"),
+    ]
+    fig.legend(handles=legend_handles,loc="upper center",bbox_to_anchor=(0.5,1.08),ncol=3,
+               frameon=False,columnspacing=1.4,handletextpad=.4)
     save(fig, "fig_external_transfer")
     print(json.dumps(summary,indent=2))
 
