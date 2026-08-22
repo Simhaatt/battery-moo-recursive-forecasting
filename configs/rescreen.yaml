@@ -1,0 +1,9 @@
+candidates_per_method: 5
+seeds: [42, 52, 62]
+total_trainings: 45
+teacher_epochs: 160
+rollout_epochs: 30
+patience: 30
+minimum_epochs: 10
+selection: method-specific resource-aware knee after multi-seed mean aggregation
+

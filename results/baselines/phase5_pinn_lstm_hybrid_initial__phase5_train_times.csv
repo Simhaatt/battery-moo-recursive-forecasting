@@ -1,0 +1,6 @@
+model,train_time_s
+Hybrid_A_physics_features,21.75717258453369
+Hybrid_B_PINN_LSTM_light,23.64197015762329
+Hybrid_B_PINN_LSTM_strong,23.56956458091736
+Hybrid_C_minimal_phys,23.859118700027466
+LSTM_v4_rebuilt_full,23.026922941207886

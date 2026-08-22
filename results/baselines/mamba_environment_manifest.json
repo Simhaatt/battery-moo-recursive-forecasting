@@ -1,0 +1,30 @@
+{
+  "journal_target": "Soft Computing (Springer)",
+  "implementation": "official state-spaces/mamba Mamba block",
+  "mamba_ssm_version": "2.3.2.post1",
+  "python": "3.12.13",
+  "torch": "2.10.0+cu128",
+  "device": "cuda",
+  "gpu": "Tesla T4",
+  "seeds": [
+    42,
+    52,
+    62,
+    72,
+    82
+  ],
+  "configuration": {
+    "sequence_length": 15,
+    "common_evaluation_start": 20,
+    "rollout_horizon": 10,
+    "d_model": 64,
+    "layers": 2,
+    "d_state": 16,
+    "d_conv": 4,
+    "expand": 2,
+    "learning_rate": 0.0007,
+    "teacher_epochs": 220,
+    "rollout_epochs": 40
+  },
+  "smoke_test": false
+}

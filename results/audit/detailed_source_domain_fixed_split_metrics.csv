@@ -1,0 +1,17 @@
+Model,Protocol,Q MAPE (%),Re MAPE (%),Macro MAPE (%),Q RMSE,Re RMSE,Q R2,Re R2,Source
+LSTM v1 teacher-forced,teacher-forced,1.928,0.881,1.405,0.06309,0.27951,0.9463,0.9730,phase1_master_final.csv
+LSTM v4 rollout-tuned,autoregressive rollout,2.303,0.799,1.551,0.09029,0.20935,0.8901,0.9848,phase1_master_final.csv
+LSTM v3 rollout,autoregressive rollout,2.626,0.797,1.712,0.09526,0.18696,0.8777,0.9879,phase1_master_final.csv
+LSTM v2 no-history,pointwise,3.708,1.845,2.777,0.11580,0.38399,0.8192,0.9490,phase1_master_final.csv
+PINN_phys,pointwise,5.015,8.644,6.830,0.16880,2.53022,0.6737,0.3554,phase1_master_final.csv
+PINN_pred,pointwise,5.066,8.622,6.844,0.17065,2.47014,0.6665,0.3857,phase1_master_final.csv
+Random Forest,pointwise full9,5.376,7.838,6.607,0.17784,2.04636,0.6378,0.5784,phase1_rf_xgb_metrics_summary.csv
+XGBoost,pointwise full9,5.170,8.149,6.659,0.16220,2.07615,0.6987,0.5660,phase1_rf_xgb_metrics_summary.csv
+ExtraTrees,pointwise full9,4.991,9.297,7.144,0.16192,2.35568,0.6998,0.4413,phase1_rf_xgb_metrics_summary.csv
+Decision Tree,pointwise,7.035,7.616,7.326,0.22901,2.41155,0.3995,0.4145,phase1_master_final.csv
+Neural ODE,pointwise,7.937,8.464,8.200,0.23743,2.28847,0.3545,0.4727,phase1_master_final.csv
+Residual MLP,pointwise,8.297,11.018,9.658,0.26887,2.56214,0.1722,0.3391,phase1_master_final.csv
+pinnfeat\_sparse\_k\_re0\_rct0\_q0\_eastress,PINN-feature LSTM rollout,2.587,0.689,1.638,0.10345,0.26432,0.8557,0.9758,phase6_pinn_feature_sparse.zip!phase5_metrics_summary.csv
+pinnfeat\_sparse\_k\_re0\_q0\_eastress,PINN-feature LSTM rollout,3.204,0.364,1.784,0.11389,0.11409,0.8251,0.9955,phase6_pinn_feature_sparse.zip!phase5_metrics_summary.csv
+PINNfeat\_k\_Re0\_Rct0\_Q0\_EaStress\_ensemble5,PINN-feature LSTM rollout,3.099,0.572,1.836,0.11635,0.17316,0.8175,0.9896,phase7_pinn_feature_ensemble.zip!phase5_metrics_summary.csv
+PINNfeat\_k\_Re0\_Q0\_EaStress\_ensemble5,PINN-feature LSTM rollout,4.108,0.408,2.258,0.15369,0.11769,0.6816,0.9952,phase7_pinn_feature_ensemble.zip!phase5_metrics_summary.csv

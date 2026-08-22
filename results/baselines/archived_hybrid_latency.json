@@ -1,0 +1,10 @@
+{
+  "model": "PINNfeat_sparse_k_Re0_Rct0_Q0_EaStress",
+  "n_trajectories": 10,
+  "n_forward_calls": 76,
+  "repeats": 100,
+  "mean_inference_ms_per_trajectory": 10.262297699926421,
+  "std_inference_ms_per_trajectory": 2.890247096412198,
+  "training_seconds_archived": 22.745105504989624,
+  "device": "CPU; torch threads=1"
+}

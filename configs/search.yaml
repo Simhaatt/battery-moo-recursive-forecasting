@@ -1,0 +1,28 @@
+objectives: [validation_macro_MAPE, log10_parameters, log10_latency_ms]
+space:
+  window_length: [10, 15, 20]
+  hidden_size: [64, 96, 128, 160, 192]
+  layers: [1, 2, 3]
+  rollout_horizon: [3, 5, 8, 10, 15]
+  learning_rate: {distribution: log_uniform, low: 0.0001, high: 0.002}
+constraint: "window_length + rollout_horizon <= 29"
+manual: {window_length: 20, hidden_size: 192, layers: 2, rollout_horizon: 8, learning_rate: 0.001}
+methods: [NSGA-II, NSGA-III, Random]
+runs_per_method: 15
+population_size: 28
+evaluations_per_run: 280
+evaluation_blocks: [28, 56, 84, 112, 140, 168, 196, 224, 252, 280]
+run_seeds: [20270001, 20270002, 20270003, 20270004, 20270005, 20270006, 20270007, 20270008, 20270009, 20270010, 20270011, 20270012, 20270013, 20270014, 20270015]
+training_seeds: [41001, 41002, 41003, 41004, 41005, 41006, 41007, 41008, 41009, 41010, 41011, 41012, 41013, 41014, 41015]
+training:
+  search: {teacher_epochs: 80, rollout_epochs: 18}
+  rescreen: {teacher_epochs: 160, rollout_epochs: 30, patience: 30, minimum_epochs: 10}
+  final: {teacher_epochs: 220, rollout_epochs: 40, patience: 40, minimum_epochs: 15}
+  optimizer: AdamW
+  weight_decay: 0.00001
+  batch_teacher: 512
+  batch_rollout: 128
+  gradient_clip: 1.0
+  rollout_learning_rate_multiplier: 0.3
+hypervolume_reference: [1.1, 1.1, 1.1]
+

@@ -1,0 +1,14 @@
+name: battery-moo-recursive-forecasting
+channels: [conda-forge, pytorch]
+dependencies:
+  - python=3.11
+  - numpy
+  - pandas
+  - scipy
+  - matplotlib
+  - seaborn
+  - pyyaml
+  - pytorch
+  - pytest
+  - pip
+

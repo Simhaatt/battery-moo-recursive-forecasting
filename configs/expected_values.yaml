@@ -1,0 +1,30 @@
+tolerance: 0.000001
+checks:
+  - {id: nsga2_final_hv, label: "NSGA-II HV", expected: 1.197236, source: optimizer_final_hv, selector: NSGA-II}
+  - {id: nsga3_final_hv, label: "NSGA-III HV", expected: 1.157911, source: optimizer_final_hv, selector: NSGA-III}
+  - {id: random_final_hv, label: "Random HV", expected: 1.141019, source: optimizer_final_hv, selector: Random}
+  - {id: pooled_pareto_count, label: "Pooled Pareto count", expected: 28, source: pooled_count, selector: all}
+  - {id: nsga2_pooled_points, label: "NSGA-II pooled points", expected: 21, source: pooled_count, selector: NSGA-II}
+  - {id: nsga3_pooled_points, label: "NSGA-III pooled points", expected: 2, source: pooled_count, selector: NSGA-III}
+  - {id: random_pooled_points, label: "Random pooled points", expected: 5, source: pooled_count, selector: Random}
+  - {id: nsga2_parity_budget, label: "NSGA-II evaluations to parity", expected: 71.2, source: budget_summary, selector: NSGA-II, column: mean_evaluations_reaching}
+  - {id: nsga3_parity_budget, label: "NSGA-III evaluations to parity", expected: 125.1, source: budget_summary, selector: NSGA-III, column: mean_evaluations_reaching}
+  - {id: random_parity_budget, label: "Random evaluations to parity", expected: 166.625, source: budget_summary, selector: Random, column: mean_evaluations_reaching}
+  - {id: nsga2_parity_reach, label: "NSGA-II runs reaching parity", expected: 15, source: budget_summary, selector: NSGA-II, column: runs_reaching}
+  - {id: nsga3_parity_reach, label: "NSGA-III runs reaching parity", expected: 10, source: budget_summary, selector: NSGA-III, column: runs_reaching}
+  - {id: random_parity_reach, label: "Random runs reaching parity", expected: 8, source: budget_summary, selector: Random, column: runs_reaching}
+  - {id: final_nsga2_mape, label: "Final NSGA-II macro MAPE", expected: 1.809732, source: final_summary, selector: NSGA-II, column: macro_MAPE_mean}
+  - {id: final_nsga2_sd, label: "Final NSGA-II macro MAPE SD", expected: 0.371581, source: final_summary, selector: NSGA-II, column: macro_MAPE_std}
+  - {id: final_nsga3_mape, label: "Final NSGA-III macro MAPE", expected: 1.871584, source: final_summary, selector: NSGA-III, column: macro_MAPE_mean}
+  - {id: final_manual_mape, label: "Final manual macro MAPE", expected: 1.855862, source: final_summary, selector: Manual, column: macro_MAPE_mean}
+  - {id: nsga2_manual_delta, label: "NSGA-II minus manual MAPE", expected: -0.046130, source: paired_test, selector: "NSGA-II - Manual", column: mean_difference}
+  - {id: nsga2_manual_ci_low, label: "NSGA-II minus manual CI low", expected: -0.383561, source: paired_test, selector: "NSGA-II - Manual", column: difference_ci95_low}
+  - {id: nsga2_manual_ci_high, label: "NSGA-II minus manual CI high", expected: 0.229344, source: paired_test, selector: "NSGA-II - Manual", column: difference_ci95_high}
+  - {id: nsga2_manual_p, label: "NSGA-II versus manual Wilcoxon p", expected: 0.769531, source: paired_test, selector: "NSGA-II - Manual", column: p_raw}
+  - {id: stress_delta, label: "Stress descriptor delta", expected: 0.622698, source: stress_summary, selector: base4, column: paired_delta_mean_pp}
+  - {id: stress_p, label: "Stress descriptor Wilcoxon p", expected: 0.001953, source: stress_summary, selector: base4, column: paired_wilcoxon_p}
+  - {id: transfer_delta, label: "Transfer minus target-only delta", expected: 6.987501, source: transfer_test, selector: source_pretrained_head_adapted, column: mean_cell_MAPE_difference_a_minus_b_pp}
+  - {id: transfer_p, label: "Transfer cell-level Wilcoxon p", expected: 0.000000001644366, source: transfer_test, selector: source_pretrained_head_adapted, column: wilcoxon_p_two_sided, tolerance: 0.000000000000001}
+  - {id: transfer_cells, label: "External evaluation cells", expected: 40, source: transfer_test, selector: source_pretrained_head_adapted, column: n_cells}
+  - {id: transfer_points, label: "External evaluation points", expected: 246, source: transfer_summary, selector: target_only_LSTM_from_scratch, column: n_eval_rows}
+  - {id: parameter_reduction, label: "Parameter reduction percent", expected: 92.5, source: derived_parameter_reduction, selector: NSGA-II, tolerance: 0.05}

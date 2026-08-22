@@ -1,0 +1,71 @@
+{
+  "run_tag": "phase4d_normalized_pinn_hybrid_external_20260625_095450",
+  "pack_dir": "/kaggle/input/datasets/simhaatt/outputs-of-luh-and-blank",
+  "kirk_root": "/kaggle/input/datasets/simhaatt/kirkaldt-battery-dataset",
+  "seq_len": 20,
+  "variants": {
+    "NormSOH_LSTM_base": [
+      "k_exp",
+      "temperature",
+      "c_rate_chg",
+      "c_rate_dischg",
+      "soc_window",
+      "age_type"
+    ],
+    "NormSOH_PINNfeat_LSTM": [
+      "k_exp",
+      "temperature",
+      "c_rate_chg",
+      "c_rate_dischg",
+      "soc_window",
+      "age_type",
+      "stress",
+      "stress_logEa",
+      "Ea_kJ_mol_mean"
+    ]
+  },
+  "base_features": [
+    "k_exp",
+    "temperature",
+    "c_rate_chg",
+    "c_rate_dischg",
+    "soc_window",
+    "age_type"
+  ],
+  "pinn_features": [
+    "k_exp",
+    "temperature",
+    "c_rate_chg",
+    "c_rate_dischg",
+    "soc_window",
+    "age_type",
+    "stress",
+    "stress_logEa",
+    "Ea_kJ_mol_mean"
+  ],
+  "targets": [
+    "SOH",
+    "Re_norm"
+  ],
+  "run_fast": false,
+  "epochs_requested": 140,
+  "epochs_run_max": 140,
+  "outputs": [
+    "figure_phase4d_kirkaldy_best_soh_rollout_trajectories.png",
+    "figure_phase4d_restored_q_mape.png",
+    "figure_phase4d_soh_mape.png",
+    "phase4d_NormSOH_LSTM_base_kirkaldy_normalized_rollout_predictions.csv",
+    "phase4d_NormSOH_LSTM_base_luh_test_rollout_predictions.csv",
+    "phase4d_NormSOH_LSTM_base_luh_test_teacher_predictions.csv",
+    "phase4d_NormSOH_PINNfeat_LSTM_kirkaldy_normalized_rollout_predictions.csv",
+    "phase4d_NormSOH_PINNfeat_LSTM_luh_test_rollout_predictions.csv",
+    "phase4d_NormSOH_PINNfeat_LSTM_luh_test_teacher_predictions.csv",
+    "phase4d_kirkaldy_extratrees_pinnfeat_normalized_predictions.csv",
+    "phase4d_kirkaldy_normalized_features.csv",
+    "phase4d_kirkaldy_parse_errors.csv",
+    "phase4d_normalized_hybrid_claims.csv",
+    "phase4d_normalized_hybrid_external_metrics_summary.csv",
+    "phase4d_normalized_hybrid_training_history.csv",
+    "phase4d_paper_normalized_hybrid_external_table.csv"
+  ]
+}

@@ -1,0 +1,7 @@
+folds: 5
+grouping_unit: cell_id
+fold_assignments: data/splits/grouped_cv_folds.csv
+tests:
+  omnibus: Friedman
+  post_hoc: pairwise two-sided Wilcoxon signed-rank with Holm correction
+

@@ -1,0 +1,15 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite the repository release and manuscript."
+title: "Multi-Objective Evolutionary Hyperparameter Optimisation for Recursive Battery Degradation Forecasting"
+type: software
+version: 1.0.0
+date-released: 2026-08-22
+authors:
+  - family-names: "T. T."
+    given-names: "Simhaa"
+    orcid: "https://orcid.org/0009-0006-9041-1103"
+  - family-names: "B."
+    given-names: "Sivakumar"
+    orcid: "https://orcid.org/0000-0002-3612-6241"
+license: MIT
+repository-code: "https://github.com/Simhaatt/battery-moo-recursive-forecasting"

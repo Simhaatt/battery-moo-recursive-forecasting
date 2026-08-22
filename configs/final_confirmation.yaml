@@ -1,0 +1,9 @@
+configurations: [Manual, NSGA-II, NSGA-III, Random]
+matched_seeds: 10
+total_trainings: 40
+teacher_epochs: 220
+rollout_epochs: 40
+patience: 40
+minimum_epochs: 15
+statistics: paired two-sided Wilcoxon, Holm correction, paired bootstrap confidence interval
+

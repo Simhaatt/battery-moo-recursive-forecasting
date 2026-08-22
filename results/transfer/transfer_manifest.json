@@ -1,0 +1,23 @@
+{
+  "journal_target": "Soft Computing (Springer)",
+  "protocol": "first 50% of each target trajectory used for calibration; later 50% used only for evaluation",
+  "external_cells": 40,
+  "external_records": 511,
+  "external_evaluation_points": 246,
+  "source_train_cells": 209,
+  "source_validation_cells": 9,
+  "seeds": [
+    42,
+    52,
+    62,
+    72,
+    82
+  ],
+  "device": "cuda",
+  "gpu": "Tesla T4",
+  "python": "3.12.13",
+  "torch": "2.10.0+cu128",
+  "source_epochs_max": 140,
+  "target_epochs_max": 180,
+  "smoke_test": false
+}

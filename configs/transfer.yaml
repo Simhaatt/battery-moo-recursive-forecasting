@@ -1,0 +1,10 @@
+dataset: Kirkaldy 21700 external corpus
+cells: 40
+evaluation_points: 246
+adaptation: frozen source representation with head-only fitting
+control: target-only LSTM trained from scratch on first 50 percent of each trajectory
+evaluation: later 50 percent
+statistical_unit: cell
+bootstrap_resamples: 10000
+test: paired two-sided Wilcoxon signed-rank
+

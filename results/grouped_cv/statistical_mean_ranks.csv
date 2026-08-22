@@ -1,0 +1,8 @@
+variant,mean_rank
+LSTM_main_full9_teacher_forced,1.4
+LSTM_main_full9_rollout,2.6
+PINNfeat_sparse_k_Re0_Q0_EaStress_rollout,3.2
+LSTM_sparse_k_Re0_rollout,3.6
+PINNfeat_sparse_k_Re0_Rct0_Q0_EaStress_rollout,4.2
+PINN_pred_full9,6.0
+PINN_phys_full9,7.0

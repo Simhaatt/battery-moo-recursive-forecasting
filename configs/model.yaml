@@ -1,0 +1,10 @@
+input_channels: 11
+lstm_dropout_multilayer: 0.2
+head:
+  - {type: Linear, units: 128}
+  - {type: ReLU}
+  - {type: Dropout, probability: 0.1}
+  - {type: Linear, units: 64}
+  - {type: ReLU}
+  - {type: Linear, units: 2}
+

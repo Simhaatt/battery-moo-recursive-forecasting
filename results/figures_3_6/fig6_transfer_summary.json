@@ -1,0 +1,11 @@
+{
+  "n": 40,
+  "mean_delta": 6.987501122438182,
+  "median_delta": 5.034457523492144,
+  "bootstrap_ci_low": 5.187332211161293,
+  "bootstrap_ci_high": 8.794860466085598,
+  "wilcoxon_W": 25.0,
+  "wilcoxon_p": 1.6443664208054543e-09,
+  "bootstrap_seed": 20260820,
+  "bootstrap_resamples": 10000
+}

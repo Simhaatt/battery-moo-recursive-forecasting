@@ -1,0 +1,7 @@
+{
+  "friedman_chi_square": 24.171428571428578,
+  "friedman_p": 0.0004856626500169065,
+  "n_folds": 5,
+  "n_models": 7,
+  "nemenyi_critical_difference_alpha_0_05": 4.0281720082559564
+}

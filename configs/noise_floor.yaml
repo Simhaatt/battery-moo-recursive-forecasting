@@ -1,0 +1,5 @@
+configurations: 8
+seeds: [42, 52, 62, 72, 82, 92, 102, 112, 122, 132]
+total_trainings: 80
+purpose: quantify candidate-level stochastic training noise before optimizer comparison
+

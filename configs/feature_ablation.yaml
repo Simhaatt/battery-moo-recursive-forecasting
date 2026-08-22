@@ -1,0 +1,6 @@
+protocols: [teacher_forced, autoregressive_rollout]
+primary_protocol: autoregressive_rollout
+archived_resistance_name: Rct0
+public_resistance_name: Rpulse0
+note: historical exploratory ablation; clean matched-seed stress result is governed by stress_ablation.yaml
+

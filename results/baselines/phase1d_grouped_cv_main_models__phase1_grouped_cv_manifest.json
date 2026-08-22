@@ -1,0 +1,83 @@
+{
+  "run_tag": "phase1_grouped_cv_main_models_20260625_075021",
+  "created_at": "2026-06-25T07:55:06.920099",
+  "seed": 42,
+  "n_folds": 5,
+  "run_fast": false,
+  "seq_len": 20,
+  "lstm_max_epochs": 180,
+  "lstm_patience": 35,
+  "pinn_max_epochs": 180,
+  "pinn_patience": 35,
+  "lstm_variants": {
+    "LSTM_main_full9": [
+      "k_exp",
+      "temperature",
+      "c_rate_chg",
+      "c_rate_dischg",
+      "soc_window",
+      "age_type",
+      "Q0",
+      "Re0",
+      "Rct0"
+    ],
+    "LSTM_sparse_k_Re0": [
+      "k_exp",
+      "Re0"
+    ],
+    "PINNfeat_sparse_k_Re0_Q0_EaStress": [
+      "k_exp",
+      "Re0",
+      "Q0",
+      "stress",
+      "Ea_kJ_mol_mean"
+    ],
+    "PINNfeat_sparse_k_Re0_Rct0_Q0_EaStress": [
+      "k_exp",
+      "Re0",
+      "Rct0",
+      "Q0",
+      "stress",
+      "Ea_kJ_mol_mean"
+    ]
+  },
+  "pinn_variants": {
+    "PINN_pred_full9": {
+      "features": [
+        "k_exp",
+        "temperature",
+        "c_rate_chg",
+        "c_rate_dischg",
+        "soc_window",
+        "age_type",
+        "Q0",
+        "Re0",
+        "Rct0"
+      ],
+      "physics": false
+    },
+    "PINN_phys_full9": {
+      "features": [
+        "k_exp",
+        "temperature",
+        "c_rate_chg",
+        "c_rate_dischg",
+        "soc_window",
+        "age_type",
+        "Q0",
+        "Re0",
+        "Rct0"
+      ],
+      "physics": true
+    }
+  },
+  "interpretation": [
+    "Luh & Blank only.",
+    "Grouped by cell_id: no cell appears in both training and held-out fold.",
+    "Kirkaldy is not used here; it remains Phase 4 external validation.",
+    "LSTM main full9 is evaluated in teacher-forced and autoregressive rollout modes.",
+    "Sparse LSTM is evaluated in autoregressive rollout mode.",
+    "PINN-feature sparse LSTM hybrids use Ea_kJ_mol_mean and Arrhenius stress, then are evaluated in autoregressive rollout mode.",
+    "PINN_pred and PINN_phys are pointwise held-out cell evaluations."
+  ]
+}

@@ -1,0 +1,8 @@
+feature_set,teacher_mape,rollout_mape,teacher_rank,rollout_rank
+Full features,1.168,1.457,5,3
+No temperature,1.312,2.004,6,6
+No ageing index,1.374,1.847,7,4
+$k_{exp}+T$,0.613,1.938,1,5
+"$k_{exp}+R_{e,0}$",0.616,1.284,2,1
+"$k_{exp}+T+R_{e,0}$",0.682,2.09,3,7
+"$k_{exp}+T+R_{e,0}+R_{pulse,0}+Q_0$",0.806,1.406,4,2

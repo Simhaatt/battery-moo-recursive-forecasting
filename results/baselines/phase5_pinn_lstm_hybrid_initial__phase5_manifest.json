@@ -1,0 +1,268 @@
+{
+  "run_tag": "phase5_pinn_lstm_hybrid_20260625_063548",
+  "created_at": "2026-06-25T06:35:49.131509",
+  "device": "cuda",
+  "run_fast": false,
+  "seq_len": 20,
+  "phase1_reference": {
+    "LSTM_v1_teacher_forced_macro_mape": 1.405,
+    "LSTM_v4_rollout_tuned_macro_mape": 1.551,
+    "PINN_phys_macro_mape": 6.83,
+    "PINN_phys_Ea_kJ": 57.49
+  },
+  "candidates": [
+    {
+      "name": "LSTM_v4_rebuilt_full",
+      "features": [
+        "k_exp",
+        "temperature",
+        "c_rate_chg",
+        "c_rate_dischg",
+        "soc_window",
+        "age_type",
+        "Q0",
+        "Re0",
+        "Rct0"
+      ],
+      "phys_weight": 0.0,
+      "mono_weight": 0.0,
+      "force_full": true
+    },
+    {
+      "name": "Hybrid_A_physics_features",
+      "features": [
+        "k_exp",
+        "temperature",
+        "c_rate_chg",
+        "c_rate_dischg",
+        "soc_window",
+        "age_type",
+        "Q0",
+        "Re0",
+        "Rct0",
+        "stress",
+        "Ea_kJ_mol_mean"
+      ],
+      "phys_weight": 0.0,
+      "mono_weight": 0.0,
+      "force_full": true
+    },
+    {
+      "name": "Hybrid_B_PINN_LSTM_light",
+      "features": [
+        "k_exp",
+        "temperature",
+        "c_rate_chg",
+        "c_rate_dischg",
+        "soc_window",
+        "age_type",
+        "Q0",
+        "Re0",
+        "Rct0",
+        "stress",
+        "Ea_kJ_mol_mean"
+      ],
+      "phys_weight": 0.015,
+      "mono_weight": 0.04,
+      "ea_weight": 0.001,
+      "force_full": true
+    },
+    {
+      "name": "Hybrid_B_PINN_LSTM_strong",
+      "features": [
+        "k_exp",
+        "temperature",
+        "c_rate_chg",
+        "c_rate_dischg",
+        "soc_window",
+        "age_type",
+        "Q0",
+        "Re0",
+        "Rct0",
+        "stress",
+        "Ea_kJ_mol_mean"
+      ],
+      "phys_weight": 0.04,
+      "mono_weight": 0.1,
+      "ea_weight": 0.002,
+      "force_full": true
+    },
+    {
+      "name": "Hybrid_C_minimal_phys",
+      "features": [
+        "k_exp",
+        "temperature",
+        "Re0",
+        "Rct0",
+        "Q0",
+        "stress",
+        "Ea_kJ_mol_mean"
+      ],
+      "phys_weight": 0.025,
+      "mono_weight": 0.06,
+      "ea_weight": 0.001,
+      "force_full": true
+    }
+  ],
+  "artifacts": [
+    {
+      "name": "LSTM_v4_rebuilt_full",
+      "features": [
+        "k_exp",
+        "temperature",
+        "c_rate_chg",
+        "c_rate_dischg",
+        "soc_window",
+        "age_type",
+        "Q0",
+        "Re0",
+        "Rct0"
+      ],
+      "model_path": "/kaggle/working/phase5_pinn_lstm_hybrid_20260625_063548/models/lstm_v4_rebuilt_full.pth",
+      "bundle_path": "/kaggle/working/phase5_pinn_lstm_hybrid_20260625_063548/models/lstm_v4_rebuilt_full_scalers_meta.pt",
+      "train_time_s": 23.026922941207886,
+      "val_diag": {
+        "Q_monotonic_violations": 0,
+        "Re_monotonic_violations": 24,
+        "monotonic_steps_checked": 54,
+        "Q_violation_rate": 0.0,
+        "Re_violation_rate": 0.4444444444444444
+      },
+      "test_diag": {
+        "Q_monotonic_violations": 0,
+        "Re_monotonic_violations": 14,
+        "monotonic_steps_checked": 66,
+        "Q_violation_rate": 0.0,
+        "Re_violation_rate": 0.21212121212121213
+      }
+    },
+    {
+      "name": "Hybrid_A_physics_features",
+      "features": [
+        "k_exp",
+        "temperature",
+        "c_rate_chg",
+        "c_rate_dischg",
+        "soc_window",
+        "age_type",
+        "Q0",
+        "Re0",
+        "Rct0",
+        "stress",
+        "Ea_kJ_mol_mean"
+      ],
+      "model_path": "/kaggle/working/phase5_pinn_lstm_hybrid_20260625_063548/models/hybrid_a_physics_features.pth",
+      "bundle_path": "/kaggle/working/phase5_pinn_lstm_hybrid_20260625_063548/models/hybrid_a_physics_features_scalers_meta.pt",
+      "train_time_s": 21.75717258453369,
+      "val_diag": {
+        "Q_monotonic_violations": 5,
+        "Re_monotonic_violations": 11,
+        "monotonic_steps_checked": 54,
+        "Q_violation_rate": 0.09259259259259259,
+        "Re_violation_rate": 0.2037037037037037
+      },
+      "test_diag": {
+        "Q_monotonic_violations": 0,
+        "Re_monotonic_violations": 29,
+        "monotonic_steps_checked": 66,
+        "Q_violation_rate": 0.0,
+        "Re_violation_rate": 0.4393939393939394
+      }
+    },
+    {
+      "name": "Hybrid_B_PINN_LSTM_light",
+      "features": [
+        "k_exp",
+        "temperature",
+        "c_rate_chg",
+        "c_rate_dischg",
+        "soc_window",
+        "age_type",
+        "Q0",
+        "Re0",
+        "Rct0",
+        "stress",
+        "Ea_kJ_mol_mean"
+      ],
+      "model_path": "/kaggle/working/phase5_pinn_lstm_hybrid_20260625_063548/models/hybrid_b_pinn_lstm_light.pth",
+      "bundle_path": "/kaggle/working/phase5_pinn_lstm_hybrid_20260625_063548/models/hybrid_b_pinn_lstm_light_scalers_meta.pt",
+      "train_time_s": 23.64197015762329,
+      "val_diag": {
+        "Q_monotonic_violations": 5,
+        "Re_monotonic_violations": 19,
+        "monotonic_steps_checked": 54,
+        "Q_violation_rate": 0.09259259259259259,
+        "Re_violation_rate": 0.35185185185185186
+      },
+      "test_diag": {
+        "Q_monotonic_violations": 0,
+        "Re_monotonic_violations": 29,
+        "monotonic_steps_checked": 66,
+        "Q_violation_rate": 0.0,
+        "Re_violation_rate": 0.4393939393939394
+      }
+    },
+    {
+      "name": "Hybrid_B_PINN_LSTM_strong",
+      "features": [
+        "k_exp",
+        "temperature",
+        "c_rate_chg",
+        "c_rate_dischg",
+        "soc_window",
+        "age_type",
+        "Q0",
+        "Re0",
+        "Rct0",
+        "stress",
+        "Ea_kJ_mol_mean"
+      ],
+      "model_path": "/kaggle/working/phase5_pinn_lstm_hybrid_20260625_063548/models/hybrid_b_pinn_lstm_strong.pth",
+      "bundle_path": "/kaggle/working/phase5_pinn_lstm_hybrid_20260625_063548/models/hybrid_b_pinn_lstm_strong_scalers_meta.pt",
+      "train_time_s": 23.56956458091736,
+      "val_diag": {
+        "Q_monotonic_violations": 5,
+        "Re_monotonic_violations": 19,
+        "monotonic_steps_checked": 54,
+        "Q_violation_rate": 0.09259259259259259,
+        "Re_violation_rate": 0.35185185185185186
+      },
+      "test_diag": {
+        "Q_monotonic_violations": 0,
+        "Re_monotonic_violations": 29,
+        "monotonic_steps_checked": 66,
+        "Q_violation_rate": 0.0,
+        "Re_violation_rate": 0.4393939393939394
+      }
+    },
+    {
+      "name": "Hybrid_C_minimal_phys",
+      "features": [
+        "k_exp",
+        "temperature",
+        "Re0",
+        "Rct0",
+        "Q0",
+        "stress",
+        "Ea_kJ_mol_mean"
+      ],
+      "model_path": "/kaggle/working/phase5_pinn_lstm_hybrid_20260625_063548/models/hybrid_c_minimal_phys.pth",
+      "bundle_path": "/kaggle/working/phase5_pinn_lstm_hybrid_20260625_063548/models/hybrid_c_minimal_phys_scalers_meta.pt",
+      "train_time_s": 23.859118700027466,
+      "val_diag": {
+        "Q_monotonic_violations": 4,
+        "Re_monotonic_violations": 41,
+        "monotonic_steps_checked": 54,
+        "Q_violation_rate": 0.07407407407407407,
+        "Re_violation_rate": 0.7592592592592593
+      },
+      "test_diag": {
+        "Q_monotonic_violations": 0,
+        "Re_monotonic_violations": 38,
+        "monotonic_steps_checked": 66,
+        "Q_violation_rate": 0.0,
+        "Re_violation_rate": 0.5757575757575758
+      }
+    }
+  ]
+}

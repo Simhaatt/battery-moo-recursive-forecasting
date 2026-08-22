@@ -1,0 +1,273 @@
+{
+  "run_tag": "phase1e_current_model_ablation_20260625_091259",
+  "created_at": "2026-06-25T09:16:06.912624",
+  "run_fast": false,
+  "seq_len": 20,
+  "lstm_max_epochs": 160,
+  "pinn_max_epochs": 160,
+  "ablation_variants": {
+    "Full9": [
+      "k_exp",
+      "temperature",
+      "c_rate_chg",
+      "c_rate_dischg",
+      "soc_window",
+      "age_type",
+      "Q0",
+      "Re0",
+      "Rct0"
+    ],
+    "No_Temperature": [
+      "k_exp",
+      "c_rate_chg",
+      "c_rate_dischg",
+      "soc_window",
+      "age_type",
+      "Q0",
+      "Re0",
+      "Rct0"
+    ],
+    "No_Re0_Rct0": [
+      "k_exp",
+      "temperature",
+      "c_rate_chg",
+      "c_rate_dischg",
+      "soc_window",
+      "age_type",
+      "Q0"
+    ],
+    "No_NearZero": [
+      "k_exp",
+      "temperature",
+      "c_rate_chg",
+      "Q0",
+      "Re0",
+      "Rct0"
+    ],
+    "No_Re0": [
+      "k_exp",
+      "temperature",
+      "c_rate_chg",
+      "c_rate_dischg",
+      "soc_window",
+      "age_type",
+      "Q0",
+      "Rct0"
+    ],
+    "No_Rct0": [
+      "k_exp",
+      "temperature",
+      "c_rate_chg",
+      "c_rate_dischg",
+      "soc_window",
+      "age_type",
+      "Q0",
+      "Re0"
+    ],
+    "No_Q0": [
+      "k_exp",
+      "temperature",
+      "c_rate_chg",
+      "c_rate_dischg",
+      "soc_window",
+      "age_type",
+      "Re0",
+      "Rct0"
+    ],
+    "No_c_rate_chg": [
+      "k_exp",
+      "temperature",
+      "c_rate_dischg",
+      "soc_window",
+      "age_type",
+      "Q0",
+      "Re0",
+      "Rct0"
+    ],
+    "No_k_exp": [
+      "temperature",
+      "c_rate_chg",
+      "c_rate_dischg",
+      "soc_window",
+      "age_type",
+      "Q0",
+      "Re0",
+      "Rct0"
+    ],
+    "k_Re0": [
+      "k_exp",
+      "Re0"
+    ],
+    "k_Re0_Q0": [
+      "k_exp",
+      "Re0",
+      "Q0"
+    ],
+    "k_Re0_Rct0_Q0": [
+      "k_exp",
+      "Re0",
+      "Rct0",
+      "Q0"
+    ],
+    "PINNfeat_k_Re0_Q0_EaStress": [
+      "k_exp",
+      "Re0",
+      "Q0",
+      "stress",
+      "Ea_kJ_mol_mean"
+    ],
+    "PINNfeat_k_Re0_Rct0_Q0_EaStress": [
+      "k_exp",
+      "Re0",
+      "Rct0",
+      "Q0",
+      "stress",
+      "Ea_kJ_mol_mean"
+    ],
+    "PINNfeat_no_Ea": [
+      "k_exp",
+      "Re0",
+      "Rct0",
+      "Q0",
+      "stress"
+    ],
+    "PINNfeat_no_stress": [
+      "k_exp",
+      "Re0",
+      "Rct0",
+      "Q0",
+      "Ea_kJ_mol_mean"
+    ]
+  },
+  "pinn_variants": {
+    "Full9": [
+      "k_exp",
+      "temperature",
+      "c_rate_chg",
+      "c_rate_dischg",
+      "soc_window",
+      "age_type",
+      "Q0",
+      "Re0",
+      "Rct0"
+    ],
+    "No_Temperature": [
+      "k_exp",
+      "c_rate_chg",
+      "c_rate_dischg",
+      "soc_window",
+      "age_type",
+      "Q0",
+      "Re0",
+      "Rct0"
+    ],
+    "No_Re0_Rct0": [
+      "k_exp",
+      "temperature",
+      "c_rate_chg",
+      "c_rate_dischg",
+      "soc_window",
+      "age_type",
+      "Q0"
+    ],
+    "No_NearZero": [
+      "k_exp",
+      "temperature",
+      "c_rate_chg",
+      "Q0",
+      "Re0",
+      "Rct0"
+    ],
+    "No_Re0": [
+      "k_exp",
+      "temperature",
+      "c_rate_chg",
+      "c_rate_dischg",
+      "soc_window",
+      "age_type",
+      "Q0",
+      "Rct0"
+    ],
+    "No_Rct0": [
+      "k_exp",
+      "temperature",
+      "c_rate_chg",
+      "c_rate_dischg",
+      "soc_window",
+      "age_type",
+      "Q0",
+      "Re0"
+    ],
+    "No_Q0": [
+      "k_exp",
+      "temperature",
+      "c_rate_chg",
+      "c_rate_dischg",
+      "soc_window",
+      "age_type",
+      "Re0",
+      "Rct0"
+    ],
+    "No_c_rate_chg": [
+      "k_exp",
+      "temperature",
+      "c_rate_dischg",
+      "soc_window",
+      "age_type",
+      "Q0",
+      "Re0",
+      "Rct0"
+    ],
+    "k_Re0": [
+      "k_exp",
+      "Re0"
+    ],
+    "k_Re0_Q0": [
+      "k_exp",
+      "Re0",
+      "Q0"
+    ],
+    "k_Re0_Rct0_Q0": [
+      "k_exp",
+      "Re0",
+      "Rct0",
+      "Q0"
+    ],
+    "PINNfeat_k_Re0_Q0_EaStress": [
+      "k_exp",
+      "Re0",
+      "Q0",
+      "stress",
+      "Ea_kJ_mol_mean"
+    ],
+    "PINNfeat_k_Re0_Rct0_Q0_EaStress": [
+      "k_exp",
+      "Re0",
+      "Rct0",
+      "Q0",
+      "stress",
+      "Ea_kJ_mol_mean"
+    ],
+    "PINNfeat_no_Ea": [
+      "k_exp",
+      "Re0",
+      "Rct0",
+      "Q0",
+      "stress"
+    ],
+    "PINNfeat_no_stress": [
+      "k_exp",
+      "Re0",
+      "Rct0",
+      "Q0",
+      "Ea_kJ_mol_mean"
+    ]
+  },
+  "notes": [
+    "Luh & Blank only.",
+    "Kirkaldy is not used here.",
+    "LSTM teacher-forced and rollout are evaluated for each feature variant.",
+    "PINN-feature hybrid rows are the sparse LSTM variants containing Ea_kJ_mol_mean and stress.",
+    "PINN_pred and PINN_phys are pointwise ablations."
+  ]
+}

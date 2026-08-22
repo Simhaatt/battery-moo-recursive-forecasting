@@ -1,0 +1,6 @@
+base_features: [k_exp, Re0, Rpulse0, Q0]
+comparison: add stress descriptor
+seeds: 10
+matched_initialization: true
+primary_statistic: paired two-sided Wilcoxon signed-rank
+

@@ -1,0 +1,6 @@
+model,train_time_s
+PINNfeat_sparse_k_Re0_EaStress,24.652955293655396
+PINNfeat_sparse_k_Re0_Q0_EaStress,25.476836919784546
+PINNfeat_sparse_k_Re0_Rct0_Q0_EaStress,22.745105504989624
+PINNfeat_sparse_k_T_Re0_EaStress,24.783406019210815
+PINNfeat_sparse_k_T_Re0_Q0_EaStress,22.78830599784851

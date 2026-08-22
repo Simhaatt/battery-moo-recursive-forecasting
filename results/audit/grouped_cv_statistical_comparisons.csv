@@ -1,0 +1,9 @@
+Comparison,n folds,Mean diff pp (first-second),95% CI pp,Wilcoxon p,paired t p,Cohen dz,Interpretation
+LSTM full9 rollout vs sparse LSTM k+Re0 rollout,5,-0.253,"[-0.441, -0.064]",0.0625,0.0204,-1.664,statistically separable (paired test p<0.05)
+LSTM full9 rollout vs PINNfeat k+Re0+Rct0+Q0+EaStress,5,-0.461,"[-1.012, 0.091]",0.1250,0.0812,-1.037,robustness trend only; not statistically separable at n=5
+LSTM full9 rollout vs PINNfeat k+Re0+Q0+EaStress,5,-0.462,"[-1.448, 0.524]",0.3125,0.2633,-0.582,robustness trend only; not statistically separable at n=5
+LSTM full9 teacher-forced vs rollout,5,-0.172,"[-0.232, -0.113]",0.0625,0.0013,-3.583,statistically separable (paired test p<0.05)
+PINNfeat k+Re0+Rct0+Q0+EaStress vs PINN_pred full9,5,-5.473,"[-6.451, -4.494]",0.0625,0.0001,-6.944,statistically separable (paired test p<0.05)
+PINNfeat k+Re0+Rct0+Q0+EaStress vs PINN_phys full9,5,-5.961,"[-6.894, -5.028]",0.0625,0.0001,-7.932,statistically separable (paired test p<0.05)
+PINNfeat k+Re0+Q0+EaStress vs PINN_pred full9,5,-5.472,"[-6.767, -4.177]",0.0625,0.0003,-5.247,statistically separable (paired test p<0.05)
+PINNfeat k+Re0+Q0+EaStress vs PINN_phys full9,5,-5.960,"[-7.278, -4.642]",0.0625,0.0002,-5.613,statistically separable (paired test p<0.05)

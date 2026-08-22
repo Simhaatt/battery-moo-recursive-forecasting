@@ -1,0 +1,4 @@
+method,runs_reaching,total_runs,mean_evaluations_reaching,sd_evaluations_reaching,speedup_vs_random_reachers
+NSGA-II,15,15,71.2,49.76544986232918,2.3402387640449436
+NSGA-III,10,15,125.1,66.96342285158369,1.3319344524380496
+Random,8,15,166.625,68.02507415861973,1.0

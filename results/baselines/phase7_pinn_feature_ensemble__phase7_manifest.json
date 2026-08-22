@@ -1,0 +1,541 @@
+{
+  "run_tag": "phase7_pinn_feature_ensemble_20260625_065400",
+  "created_at": "2026-06-25T06:54:00.572249",
+  "device": "cuda",
+  "run_fast": false,
+  "seq_len": 20,
+  "phase1_reference": {
+    "LSTM_v1_teacher_forced_macro_mape": 1.405,
+    "LSTM_v4_rollout_tuned_macro_mape": 1.551,
+    "PINN_phys_macro_mape": 6.83,
+    "PINN_phys_Ea_kJ": 57.49
+  },
+  "ensemble_seeds": [
+    42,
+    52,
+    62,
+    72,
+    82
+  ],
+  "architectures": {
+    "PINNfeat_k_Re0_Rct0_Q0_EaStress": [
+      "k_exp",
+      "Re0",
+      "Rct0",
+      "Q0",
+      "stress",
+      "Ea_kJ_mol_mean"
+    ],
+    "PINNfeat_k_Re0_Q0_EaStress": [
+      "k_exp",
+      "Re0",
+      "Q0",
+      "stress",
+      "Ea_kJ_mol_mean"
+    ]
+  },
+  "candidates": [
+    {
+      "name": "PINNfeat_k_Re0_Rct0_Q0_EaStress_seed42",
+      "ensemble_family": "PINNfeat_k_Re0_Rct0_Q0_EaStress",
+      "features": [
+        "k_exp",
+        "Re0",
+        "Rct0",
+        "Q0",
+        "stress",
+        "Ea_kJ_mol_mean"
+      ],
+      "seed": 42,
+      "phys_weight": 0.0,
+      "mono_weight": 0.0,
+      "force_full": true
+    },
+    {
+      "name": "PINNfeat_k_Re0_Rct0_Q0_EaStress_seed52",
+      "ensemble_family": "PINNfeat_k_Re0_Rct0_Q0_EaStress",
+      "features": [
+        "k_exp",
+        "Re0",
+        "Rct0",
+        "Q0",
+        "stress",
+        "Ea_kJ_mol_mean"
+      ],
+      "seed": 52,
+      "phys_weight": 0.0,
+      "mono_weight": 0.0,
+      "force_full": true
+    },
+    {
+      "name": "PINNfeat_k_Re0_Rct0_Q0_EaStress_seed62",
+      "ensemble_family": "PINNfeat_k_Re0_Rct0_Q0_EaStress",
+      "features": [
+        "k_exp",
+        "Re0",
+        "Rct0",
+        "Q0",
+        "stress",
+        "Ea_kJ_mol_mean"
+      ],
+      "seed": 62,
+      "phys_weight": 0.0,
+      "mono_weight": 0.0,
+      "force_full": true
+    },
+    {
+      "name": "PINNfeat_k_Re0_Rct0_Q0_EaStress_seed72",
+      "ensemble_family": "PINNfeat_k_Re0_Rct0_Q0_EaStress",
+      "features": [
+        "k_exp",
+        "Re0",
+        "Rct0",
+        "Q0",
+        "stress",
+        "Ea_kJ_mol_mean"
+      ],
+      "seed": 72,
+      "phys_weight": 0.0,
+      "mono_weight": 0.0,
+      "force_full": true
+    },
+    {
+      "name": "PINNfeat_k_Re0_Rct0_Q0_EaStress_seed82",
+      "ensemble_family": "PINNfeat_k_Re0_Rct0_Q0_EaStress",
+      "features": [
+        "k_exp",
+        "Re0",
+        "Rct0",
+        "Q0",
+        "stress",
+        "Ea_kJ_mol_mean"
+      ],
+      "seed": 82,
+      "phys_weight": 0.0,
+      "mono_weight": 0.0,
+      "force_full": true
+    },
+    {
+      "name": "PINNfeat_k_Re0_Q0_EaStress_seed42",
+      "ensemble_family": "PINNfeat_k_Re0_Q0_EaStress",
+      "features": [
+        "k_exp",
+        "Re0",
+        "Q0",
+        "stress",
+        "Ea_kJ_mol_mean"
+      ],
+      "seed": 42,
+      "phys_weight": 0.0,
+      "mono_weight": 0.0,
+      "force_full": true
+    },
+    {
+      "name": "PINNfeat_k_Re0_Q0_EaStress_seed52",
+      "ensemble_family": "PINNfeat_k_Re0_Q0_EaStress",
+      "features": [
+        "k_exp",
+        "Re0",
+        "Q0",
+        "stress",
+        "Ea_kJ_mol_mean"
+      ],
+      "seed": 52,
+      "phys_weight": 0.0,
+      "mono_weight": 0.0,
+      "force_full": true
+    },
+    {
+      "name": "PINNfeat_k_Re0_Q0_EaStress_seed62",
+      "ensemble_family": "PINNfeat_k_Re0_Q0_EaStress",
+      "features": [
+        "k_exp",
+        "Re0",
+        "Q0",
+        "stress",
+        "Ea_kJ_mol_mean"
+      ],
+      "seed": 62,
+      "phys_weight": 0.0,
+      "mono_weight": 0.0,
+      "force_full": true
+    },
+    {
+      "name": "PINNfeat_k_Re0_Q0_EaStress_seed72",
+      "ensemble_family": "PINNfeat_k_Re0_Q0_EaStress",
+      "features": [
+        "k_exp",
+        "Re0",
+        "Q0",
+        "stress",
+        "Ea_kJ_mol_mean"
+      ],
+      "seed": 72,
+      "phys_weight": 0.0,
+      "mono_weight": 0.0,
+      "force_full": true
+    },
+    {
+      "name": "PINNfeat_k_Re0_Q0_EaStress_seed82",
+      "ensemble_family": "PINNfeat_k_Re0_Q0_EaStress",
+      "features": [
+        "k_exp",
+        "Re0",
+        "Q0",
+        "stress",
+        "Ea_kJ_mol_mean"
+      ],
+      "seed": 82,
+      "phys_weight": 0.0,
+      "mono_weight": 0.0,
+      "force_full": true
+    }
+  ],
+  "artifacts": [
+    {
+      "name": "PINNfeat_k_Re0_Rct0_Q0_EaStress_seed42",
+      "features": [
+        "k_exp",
+        "Re0",
+        "Rct0",
+        "Q0",
+        "stress",
+        "Ea_kJ_mol_mean"
+      ],
+      "model_path": "/kaggle/working/phase7_pinn_feature_ensemble_20260625_065400/models/pinnfeat_k_re0_rct0_q0_eastress_seed42.pth",
+      "bundle_path": "/kaggle/working/phase7_pinn_feature_ensemble_20260625_065400/models/pinnfeat_k_re0_rct0_q0_eastress_seed42_scalers_meta.pt",
+      "train_time_s": 23.33321189880371,
+      "seed": 42,
+      "val_diag": {
+        "Q_monotonic_violations": 0,
+        "Re_monotonic_violations": 13,
+        "monotonic_steps_checked": 54,
+        "Q_violation_rate": 0.0,
+        "Re_violation_rate": 0.24074074074074073
+      },
+      "test_diag": {
+        "Q_monotonic_violations": 0,
+        "Re_monotonic_violations": 19,
+        "monotonic_steps_checked": 66,
+        "Q_violation_rate": 0.0,
+        "Re_violation_rate": 0.2878787878787879
+      },
+      "ensemble_family": "PINNfeat_k_Re0_Rct0_Q0_EaStress"
+    },
+    {
+      "name": "PINNfeat_k_Re0_Rct0_Q0_EaStress_seed52",
+      "features": [
+        "k_exp",
+        "Re0",
+        "Rct0",
+        "Q0",
+        "stress",
+        "Ea_kJ_mol_mean"
+      ],
+      "model_path": "/kaggle/working/phase7_pinn_feature_ensemble_20260625_065400/models/pinnfeat_k_re0_rct0_q0_eastress_seed52.pth",
+      "bundle_path": "/kaggle/working/phase7_pinn_feature_ensemble_20260625_065400/models/pinnfeat_k_re0_rct0_q0_eastress_seed52_scalers_meta.pt",
+      "train_time_s": 23.214259147644043,
+      "seed": 52,
+      "val_diag": {
+        "Q_monotonic_violations": 0,
+        "Re_monotonic_violations": 14,
+        "monotonic_steps_checked": 54,
+        "Q_violation_rate": 0.0,
+        "Re_violation_rate": 0.25925925925925924
+      },
+      "test_diag": {
+        "Q_monotonic_violations": 0,
+        "Re_monotonic_violations": 15,
+        "monotonic_steps_checked": 66,
+        "Q_violation_rate": 0.0,
+        "Re_violation_rate": 0.22727272727272727
+      },
+      "ensemble_family": "PINNfeat_k_Re0_Rct0_Q0_EaStress"
+    },
+    {
+      "name": "PINNfeat_k_Re0_Rct0_Q0_EaStress_seed62",
+      "features": [
+        "k_exp",
+        "Re0",
+        "Rct0",
+        "Q0",
+        "stress",
+        "Ea_kJ_mol_mean"
+      ],
+      "model_path": "/kaggle/working/phase7_pinn_feature_ensemble_20260625_065400/models/pinnfeat_k_re0_rct0_q0_eastress_seed62.pth",
+      "bundle_path": "/kaggle/working/phase7_pinn_feature_ensemble_20260625_065400/models/pinnfeat_k_re0_rct0_q0_eastress_seed62_scalers_meta.pt",
+      "train_time_s": 22.8032443523407,
+      "seed": 62,
+      "val_diag": {
+        "Q_monotonic_violations": 0,
+        "Re_monotonic_violations": 20,
+        "monotonic_steps_checked": 54,
+        "Q_violation_rate": 0.0,
+        "Re_violation_rate": 0.37037037037037035
+      },
+      "test_diag": {
+        "Q_monotonic_violations": 0,
+        "Re_monotonic_violations": 26,
+        "monotonic_steps_checked": 66,
+        "Q_violation_rate": 0.0,
+        "Re_violation_rate": 0.3939393939393939
+      },
+      "ensemble_family": "PINNfeat_k_Re0_Rct0_Q0_EaStress"
+    },
+    {
+      "name": "PINNfeat_k_Re0_Rct0_Q0_EaStress_seed72",
+      "features": [
+        "k_exp",
+        "Re0",
+        "Rct0",
+        "Q0",
+        "stress",
+        "Ea_kJ_mol_mean"
+      ],
+      "model_path": "/kaggle/working/phase7_pinn_feature_ensemble_20260625_065400/models/pinnfeat_k_re0_rct0_q0_eastress_seed72.pth",
+      "bundle_path": "/kaggle/working/phase7_pinn_feature_ensemble_20260625_065400/models/pinnfeat_k_re0_rct0_q0_eastress_seed72_scalers_meta.pt",
+      "train_time_s": 23.65251851081848,
+      "seed": 72,
+      "val_diag": {
+        "Q_monotonic_violations": 0,
+        "Re_monotonic_violations": 17,
+        "monotonic_steps_checked": 54,
+        "Q_violation_rate": 0.0,
+        "Re_violation_rate": 0.3148148148148148
+      },
+      "test_diag": {
+        "Q_monotonic_violations": 0,
+        "Re_monotonic_violations": 28,
+        "monotonic_steps_checked": 66,
+        "Q_violation_rate": 0.0,
+        "Re_violation_rate": 0.42424242424242425
+      },
+      "ensemble_family": "PINNfeat_k_Re0_Rct0_Q0_EaStress"
+    },
+    {
+      "name": "PINNfeat_k_Re0_Rct0_Q0_EaStress_seed82",
+      "features": [
+        "k_exp",
+        "Re0",
+        "Rct0",
+        "Q0",
+        "stress",
+        "Ea_kJ_mol_mean"
+      ],
+      "model_path": "/kaggle/working/phase7_pinn_feature_ensemble_20260625_065400/models/pinnfeat_k_re0_rct0_q0_eastress_seed82.pth",
+      "bundle_path": "/kaggle/working/phase7_pinn_feature_ensemble_20260625_065400/models/pinnfeat_k_re0_rct0_q0_eastress_seed82_scalers_meta.pt",
+      "train_time_s": 23.21953272819519,
+      "seed": 82,
+      "val_diag": {
+        "Q_monotonic_violations": 0,
+        "Re_monotonic_violations": 19,
+        "monotonic_steps_checked": 54,
+        "Q_violation_rate": 0.0,
+        "Re_violation_rate": 0.35185185185185186
+      },
+      "test_diag": {
+        "Q_monotonic_violations": 0,
+        "Re_monotonic_violations": 25,
+        "monotonic_steps_checked": 66,
+        "Q_violation_rate": 0.0,
+        "Re_violation_rate": 0.3787878787878788
+      },
+      "ensemble_family": "PINNfeat_k_Re0_Rct0_Q0_EaStress"
+    },
+    {
+      "name": "PINNfeat_k_Re0_Q0_EaStress_seed42",
+      "features": [
+        "k_exp",
+        "Re0",
+        "Q0",
+        "stress",
+        "Ea_kJ_mol_mean"
+      ],
+      "model_path": "/kaggle/working/phase7_pinn_feature_ensemble_20260625_065400/models/pinnfeat_k_re0_q0_eastress_seed42.pth",
+      "bundle_path": "/kaggle/working/phase7_pinn_feature_ensemble_20260625_065400/models/pinnfeat_k_re0_q0_eastress_seed42_scalers_meta.pt",
+      "train_time_s": 25.021686553955078,
+      "seed": 42,
+      "val_diag": {
+        "Q_monotonic_violations": 6,
+        "Re_monotonic_violations": 19,
+        "monotonic_steps_checked": 54,
+        "Q_violation_rate": 0.1111111111111111,
+        "Re_violation_rate": 0.35185185185185186
+      },
+      "test_diag": {
+        "Q_monotonic_violations": 0,
+        "Re_monotonic_violations": 19,
+        "monotonic_steps_checked": 66,
+        "Q_violation_rate": 0.0,
+        "Re_violation_rate": 0.2878787878787879
+      },
+      "ensemble_family": "PINNfeat_k_Re0_Q0_EaStress"
+    },
+    {
+      "name": "PINNfeat_k_Re0_Q0_EaStress_seed52",
+      "features": [
+        "k_exp",
+        "Re0",
+        "Q0",
+        "stress",
+        "Ea_kJ_mol_mean"
+      ],
+      "model_path": "/kaggle/working/phase7_pinn_feature_ensemble_20260625_065400/models/pinnfeat_k_re0_q0_eastress_seed52.pth",
+      "bundle_path": "/kaggle/working/phase7_pinn_feature_ensemble_20260625_065400/models/pinnfeat_k_re0_q0_eastress_seed52_scalers_meta.pt",
+      "train_time_s": 26.007127046585083,
+      "seed": 52,
+      "val_diag": {
+        "Q_monotonic_violations": 0,
+        "Re_monotonic_violations": 9,
+        "monotonic_steps_checked": 54,
+        "Q_violation_rate": 0.0,
+        "Re_violation_rate": 0.16666666666666666
+      },
+      "test_diag": {
+        "Q_monotonic_violations": 0,
+        "Re_monotonic_violations": 26,
+        "monotonic_steps_checked": 66,
+        "Q_violation_rate": 0.0,
+        "Re_violation_rate": 0.3939393939393939
+      },
+      "ensemble_family": "PINNfeat_k_Re0_Q0_EaStress"
+    },
+    {
+      "name": "PINNfeat_k_Re0_Q0_EaStress_seed62",
+      "features": [
+        "k_exp",
+        "Re0",
+        "Q0",
+        "stress",
+        "Ea_kJ_mol_mean"
+      ],
+      "model_path": "/kaggle/working/phase7_pinn_feature_ensemble_20260625_065400/models/pinnfeat_k_re0_q0_eastress_seed62.pth",
+      "bundle_path": "/kaggle/working/phase7_pinn_feature_ensemble_20260625_065400/models/pinnfeat_k_re0_q0_eastress_seed62_scalers_meta.pt",
+      "train_time_s": 22.816326141357422,
+      "seed": 62,
+      "val_diag": {
+        "Q_monotonic_violations": 0,
+        "Re_monotonic_violations": 17,
+        "monotonic_steps_checked": 54,
+        "Q_violation_rate": 0.0,
+        "Re_violation_rate": 0.3148148148148148
+      },
+      "test_diag": {
+        "Q_monotonic_violations": 0,
+        "Re_monotonic_violations": 19,
+        "monotonic_steps_checked": 66,
+        "Q_violation_rate": 0.0,
+        "Re_violation_rate": 0.2878787878787879
+      },
+      "ensemble_family": "PINNfeat_k_Re0_Q0_EaStress"
+    },
+    {
+      "name": "PINNfeat_k_Re0_Q0_EaStress_seed72",
+      "features": [
+        "k_exp",
+        "Re0",
+        "Q0",
+        "stress",
+        "Ea_kJ_mol_mean"
+      ],
+      "model_path": "/kaggle/working/phase7_pinn_feature_ensemble_20260625_065400/models/pinnfeat_k_re0_q0_eastress_seed72.pth",
+      "bundle_path": "/kaggle/working/phase7_pinn_feature_ensemble_20260625_065400/models/pinnfeat_k_re0_q0_eastress_seed72_scalers_meta.pt",
+      "train_time_s": 27.450783729553223,
+      "seed": 72,
+      "val_diag": {
+        "Q_monotonic_violations": 0,
+        "Re_monotonic_violations": 22,
+        "monotonic_steps_checked": 54,
+        "Q_violation_rate": 0.0,
+        "Re_violation_rate": 0.4074074074074074
+      },
+      "test_diag": {
+        "Q_monotonic_violations": 0,
+        "Re_monotonic_violations": 25,
+        "monotonic_steps_checked": 66,
+        "Q_violation_rate": 0.0,
+        "Re_violation_rate": 0.3787878787878788
+      },
+      "ensemble_family": "PINNfeat_k_Re0_Q0_EaStress"
+    },
+    {
+      "name": "PINNfeat_k_Re0_Q0_EaStress_seed82",
+      "features": [
+        "k_exp",
+        "Re0",
+        "Q0",
+        "stress",
+        "Ea_kJ_mol_mean"
+      ],
+      "model_path": "/kaggle/working/phase7_pinn_feature_ensemble_20260625_065400/models/pinnfeat_k_re0_q0_eastress_seed82.pth",
+      "bundle_path": "/kaggle/working/phase7_pinn_feature_ensemble_20260625_065400/models/pinnfeat_k_re0_q0_eastress_seed82_scalers_meta.pt",
+      "train_time_s": 23.060680627822876,
+      "seed": 82,
+      "val_diag": {
+        "Q_monotonic_violations": 5,
+        "Re_monotonic_violations": 16,
+        "monotonic_steps_checked": 54,
+        "Q_violation_rate": 0.09259259259259259,
+        "Re_violation_rate": 0.2962962962962963
+      },
+      "test_diag": {
+        "Q_monotonic_violations": 3,
+        "Re_monotonic_violations": 21,
+        "monotonic_steps_checked": 66,
+        "Q_violation_rate": 0.045454545454545456,
+        "Re_violation_rate": 0.3181818181818182
+      },
+      "ensemble_family": "PINNfeat_k_Re0_Q0_EaStress"
+    },
+    {
+      "name": "PINNfeat_k_Re0_Rct0_Q0_EaStress_ensemble5",
+      "kind": "prediction_ensemble",
+      "members": [
+        "PINNfeat_k_Re0_Rct0_Q0_EaStress_seed42",
+        "PINNfeat_k_Re0_Rct0_Q0_EaStress_seed52",
+        "PINNfeat_k_Re0_Rct0_Q0_EaStress_seed62",
+        "PINNfeat_k_Re0_Rct0_Q0_EaStress_seed72",
+        "PINNfeat_k_Re0_Rct0_Q0_EaStress_seed82"
+      ],
+      "val_diag": {
+        "Q_monotonic_violations": 0,
+        "Re_monotonic_violations": 16,
+        "monotonic_steps_checked": 54,
+        "Q_violation_rate": 0.0,
+        "Re_violation_rate": 0.2962962962962963
+      },
+      "test_diag": {
+        "Q_monotonic_violations": 0,
+        "Re_monotonic_violations": 19,
+        "monotonic_steps_checked": 66,
+        "Q_violation_rate": 0.0,
+        "Re_violation_rate": 0.2878787878787879
+      }
+    },
+    {
+      "name": "PINNfeat_k_Re0_Q0_EaStress_ensemble5",
+      "kind": "prediction_ensemble",
+      "members": [
+        "PINNfeat_k_Re0_Q0_EaStress_seed42",
+        "PINNfeat_k_Re0_Q0_EaStress_seed52",
+        "PINNfeat_k_Re0_Q0_EaStress_seed62",
+        "PINNfeat_k_Re0_Q0_EaStress_seed72",
+        "PINNfeat_k_Re0_Q0_EaStress_seed82"
+      ],
+      "val_diag": {
+        "Q_monotonic_violations": 0,
+        "Re_monotonic_violations": 17,
+        "monotonic_steps_checked": 54,
+        "Q_violation_rate": 0.0,
+        "Re_violation_rate": 0.3148148148148148
+      },
+      "test_diag": {
+        "Q_monotonic_violations": 0,
+        "Re_monotonic_violations": 20,
+        "monotonic_steps_checked": 66,
+        "Q_violation_rate": 0.0,
+        "Re_violation_rate": 0.30303030303030304
+      }
+    }
+  ]
+}

@@ -1,0 +1,8 @@
+stage,records,recorded_train_seconds,recorded_train_hours,source
+search_NSGA-II,4200,21851.63660011105,6.069899055586403,C:\Users\hp\Desktop\pinn\paper_revision_20260625\10_asc_optimizer_study\complete_results_audit_20260822\all_optimizer_trials.csv
+search_NSGA-III,4200,22068.587344986994,6.130163151385276,C:\Users\hp\Desktop\pinn\paper_revision_20260625\10_asc_optimizer_study\complete_results_audit_20260822\all_optimizer_trials.csv
+search_Random,4200,23705.430539757013,6.5848418165991704,C:\Users\hp\Desktop\pinn\paper_revision_20260625\10_asc_optimizer_study\complete_results_audit_20260822\all_optimizer_trials.csv
+noise_floor,80,461.03867900300037,0.12806629972305567,C:\Users\hp\Desktop\pinn\paper_revision_20260625\10_asc_optimizer_study\received_results_audit_20260821\nsga2\noise_floor_raw.csv
+candidate_rescreen,45,208.37219629700485,0.057881165638056904,C:\Users\hp\Desktop\pinn\paper_revision_20260625\10_asc_optimizer_study\complete_results_audit_20260822\candidate_rescreen_raw.csv
+final_confirmation,40,338.5986642259959,0.09405518450722108,C:\Users\hp\Desktop\pinn\paper_revision_20260625\10_asc_optimizer_study\complete_results_audit_20260822\final_ten_seed_raw.csv
+TOTAL_RECORDED_MODEL_TRAINING,12765,68633.66402438105,19.064906673439186,sum of preceding rows; excludes orchestration/analysis/I-O

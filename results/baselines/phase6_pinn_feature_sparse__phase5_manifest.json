@@ -1,0 +1,219 @@
+{
+  "run_tag": "phase6_pinn_feature_sparse_20260625_064713",
+  "created_at": "2026-06-25T06:47:13.902979",
+  "device": "cuda",
+  "run_fast": false,
+  "seq_len": 20,
+  "phase1_reference": {
+    "LSTM_v1_teacher_forced_macro_mape": 1.405,
+    "LSTM_v4_rollout_tuned_macro_mape": 1.551,
+    "PINN_phys_macro_mape": 6.83,
+    "PINN_phys_Ea_kJ": 57.49
+  },
+  "candidates": [
+    {
+      "name": "PINNfeat_sparse_k_Re0_EaStress",
+      "features": [
+        "k_exp",
+        "Re0",
+        "stress",
+        "Ea_kJ_mol_mean"
+      ],
+      "phys_weight": 0.0,
+      "mono_weight": 0.0,
+      "force_full": true
+    },
+    {
+      "name": "PINNfeat_sparse_k_Re0_Q0_EaStress",
+      "features": [
+        "k_exp",
+        "Re0",
+        "Q0",
+        "stress",
+        "Ea_kJ_mol_mean"
+      ],
+      "phys_weight": 0.0,
+      "mono_weight": 0.0,
+      "force_full": true
+    },
+    {
+      "name": "PINNfeat_sparse_k_Re0_Rct0_Q0_EaStress",
+      "features": [
+        "k_exp",
+        "Re0",
+        "Rct0",
+        "Q0",
+        "stress",
+        "Ea_kJ_mol_mean"
+      ],
+      "phys_weight": 0.0,
+      "mono_weight": 0.0,
+      "force_full": true
+    },
+    {
+      "name": "PINNfeat_sparse_k_T_Re0_EaStress",
+      "features": [
+        "k_exp",
+        "temperature",
+        "Re0",
+        "stress",
+        "Ea_kJ_mol_mean"
+      ],
+      "phys_weight": 0.0,
+      "mono_weight": 0.0,
+      "force_full": true
+    },
+    {
+      "name": "PINNfeat_sparse_k_T_Re0_Q0_EaStress",
+      "features": [
+        "k_exp",
+        "temperature",
+        "Re0",
+        "Q0",
+        "stress",
+        "Ea_kJ_mol_mean"
+      ],
+      "phys_weight": 0.0,
+      "mono_weight": 0.0,
+      "force_full": true
+    }
+  ],
+  "artifacts": [
+    {
+      "name": "PINNfeat_sparse_k_Re0_EaStress",
+      "features": [
+        "k_exp",
+        "Re0",
+        "stress",
+        "Ea_kJ_mol_mean"
+      ],
+      "model_path": "/kaggle/working/phase6_pinn_feature_sparse_20260625_064713/models/pinnfeat_sparse_k_re0_eastress.pth",
+      "bundle_path": "/kaggle/working/phase6_pinn_feature_sparse_20260625_064713/models/pinnfeat_sparse_k_re0_eastress_scalers_meta.pt",
+      "train_time_s": 24.652955293655396,
+      "val_diag": {
+        "Q_monotonic_violations": 5,
+        "Re_monotonic_violations": 18,
+        "monotonic_steps_checked": 54,
+        "Q_violation_rate": 0.09259259259259259,
+        "Re_violation_rate": 0.3333333333333333
+      },
+      "test_diag": {
+        "Q_monotonic_violations": 0,
+        "Re_monotonic_violations": 24,
+        "monotonic_steps_checked": 66,
+        "Q_violation_rate": 0.0,
+        "Re_violation_rate": 0.36363636363636365
+      }
+    },
+    {
+      "name": "PINNfeat_sparse_k_Re0_Q0_EaStress",
+      "features": [
+        "k_exp",
+        "Re0",
+        "Q0",
+        "stress",
+        "Ea_kJ_mol_mean"
+      ],
+      "model_path": "/kaggle/working/phase6_pinn_feature_sparse_20260625_064713/models/pinnfeat_sparse_k_re0_q0_eastress.pth",
+      "bundle_path": "/kaggle/working/phase6_pinn_feature_sparse_20260625_064713/models/pinnfeat_sparse_k_re0_q0_eastress_scalers_meta.pt",
+      "train_time_s": 25.476836919784546,
+      "val_diag": {
+        "Q_monotonic_violations": 6,
+        "Re_monotonic_violations": 19,
+        "monotonic_steps_checked": 54,
+        "Q_violation_rate": 0.1111111111111111,
+        "Re_violation_rate": 0.35185185185185186
+      },
+      "test_diag": {
+        "Q_monotonic_violations": 0,
+        "Re_monotonic_violations": 19,
+        "monotonic_steps_checked": 66,
+        "Q_violation_rate": 0.0,
+        "Re_violation_rate": 0.2878787878787879
+      }
+    },
+    {
+      "name": "PINNfeat_sparse_k_Re0_Rct0_Q0_EaStress",
+      "features": [
+        "k_exp",
+        "Re0",
+        "Rct0",
+        "Q0",
+        "stress",
+        "Ea_kJ_mol_mean"
+      ],
+      "model_path": "/kaggle/working/phase6_pinn_feature_sparse_20260625_064713/models/pinnfeat_sparse_k_re0_rct0_q0_eastress.pth",
+      "bundle_path": "/kaggle/working/phase6_pinn_feature_sparse_20260625_064713/models/pinnfeat_sparse_k_re0_rct0_q0_eastress_scalers_meta.pt",
+      "train_time_s": 22.745105504989624,
+      "val_diag": {
+        "Q_monotonic_violations": 0,
+        "Re_monotonic_violations": 13,
+        "monotonic_steps_checked": 54,
+        "Q_violation_rate": 0.0,
+        "Re_violation_rate": 0.24074074074074073
+      },
+      "test_diag": {
+        "Q_monotonic_violations": 0,
+        "Re_monotonic_violations": 19,
+        "monotonic_steps_checked": 66,
+        "Q_violation_rate": 0.0,
+        "Re_violation_rate": 0.2878787878787879
+      }
+    },
+    {
+      "name": "PINNfeat_sparse_k_T_Re0_EaStress",
+      "features": [
+        "k_exp",
+        "temperature",
+        "Re0",
+        "stress",
+        "Ea_kJ_mol_mean"
+      ],
+      "model_path": "/kaggle/working/phase6_pinn_feature_sparse_20260625_064713/models/pinnfeat_sparse_k_t_re0_eastress.pth",
+      "bundle_path": "/kaggle/working/phase6_pinn_feature_sparse_20260625_064713/models/pinnfeat_sparse_k_t_re0_eastress_scalers_meta.pt",
+      "train_time_s": 24.783406019210815,
+      "val_diag": {
+        "Q_monotonic_violations": 0,
+        "Re_monotonic_violations": 18,
+        "monotonic_steps_checked": 54,
+        "Q_violation_rate": 0.0,
+        "Re_violation_rate": 0.3333333333333333
+      },
+      "test_diag": {
+        "Q_monotonic_violations": 3,
+        "Re_monotonic_violations": 32,
+        "monotonic_steps_checked": 66,
+        "Q_violation_rate": 0.045454545454545456,
+        "Re_violation_rate": 0.48484848484848486
+      }
+    },
+    {
+      "name": "PINNfeat_sparse_k_T_Re0_Q0_EaStress",
+      "features": [
+        "k_exp",
+        "temperature",
+        "Re0",
+        "Q0",
+        "stress",
+        "Ea_kJ_mol_mean"
+      ],
+      "model_path": "/kaggle/working/phase6_pinn_feature_sparse_20260625_064713/models/pinnfeat_sparse_k_t_re0_q0_eastress.pth",
+      "bundle_path": "/kaggle/working/phase6_pinn_feature_sparse_20260625_064713/models/pinnfeat_sparse_k_t_re0_q0_eastress_scalers_meta.pt",
+      "train_time_s": 22.78830599784851,
+      "val_diag": {
+        "Q_monotonic_violations": 0,
+        "Re_monotonic_violations": 16,
+        "monotonic_steps_checked": 54,
+        "Q_violation_rate": 0.0,
+        "Re_violation_rate": 0.2962962962962963
+      },
+      "test_diag": {
+        "Q_monotonic_violations": 0,
+        "Re_monotonic_violations": 13,
+        "monotonic_steps_checked": 66,
+        "Q_violation_rate": 0.0,
+        "Re_violation_rate": 0.19696969696969696
+      }
+    }
+  ]
+}

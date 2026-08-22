@@ -1,0 +1,13 @@
+corpus:
+  cells: 228
+  records: 3980
+split:
+  train: {cells: 209, records: 3461}
+  validation: {cells: 9, records: 243, windows: 63}
+  test: {cells: 10, records: 276, windows: 76}
+features: [k_exp, T, Q0, Re0, Rpulse0, Cchg, Cdis, S_SOC, A_type]
+targets: [Q, Re]
+terminology:
+  archived_Rct0: Rpulse0
+  note: "The archived field is an empirical pulse-resistance proxy, not charge-transfer resistance."
+

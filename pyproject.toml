@@ -1,0 +1,24 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "battery-moo-recursive-forecasting"
+version = "1.0.0"
+description = "Reproducibility code for multi-objective recursive battery degradation forecasting"
+readme = "README.md"
+requires-python = ">=3.10"
+license = {text = "MIT"}
+authors = [{name = "Simhaa T. T."}, {name = "Sivakumar B."}]
+dependencies = ["numpy>=1.26", "pandas>=2.1", "scipy>=1.11", "matplotlib>=3.8", "PyYAML>=6"]
+
+[project.scripts]
+battery-moo-reproduce = "battery_moo.reproduce:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+pythonpath = ["src"]
+testpaths = ["tests"]
+
