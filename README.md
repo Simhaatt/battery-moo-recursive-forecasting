@@ -1,5 +1,7 @@
 # Multi-objective recursive battery-degradation forecasting
 
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.22057384.svg)](https://doi.org/10.5281/zenodo.22057384)
+
 Publication-quality code and result artifacts for the manuscript submitted to *Applied Soft Computing*. The study combines knowledge-based battery descriptors, recursive LSTM forecasting, and matched-budget multi-objective search with NSGA-II, NSGA-III, and random search.
 
 ## 1. What this repository reproduces
@@ -88,7 +90,7 @@ Original authored and executed notebooks are preserved unchanged in `notebooks/a
 
 ## 20. Citation, release, and availability
 
-Update the placeholder repository URL after publication. Create a GitHub release tagged `v1.0.0`, enable Zenodo archiving, then replace the repository/DOI placeholders in the README and manuscript. Cite using `CITATION.cff`. Code is MIT licensed; third-party datasets retain their original terms.
+Release `v1.0.0` is archived at [Zenodo](https://doi.org/10.5281/zenodo.22057384). Cite using `CITATION.cff`. Code is MIT licensed; third-party datasets retain their original terms.
 
 ## Repository map
 
@@ -106,4 +108,3 @@ Update the placeholder repository URL after publication. Create a GitHub release
 ## Limitations
 
 The repository cannot remove uncertainties inherited from the data-export provenance. In particular, historical derivations of `k_exp`, SOC/type descriptors, and activation-energy regularization are incompletely recorded. Full GPU reruns can also differ slightly across hardware/library versions. These limitations are enumerated in `KNOWN_ISSUES.md` and are not concealed by the passing artifact-reproduction check.
-

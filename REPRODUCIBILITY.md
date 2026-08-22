@@ -47,5 +47,5 @@ The source battery datasets are available from their original providers under
 their respective terms and are not redistributed. Derived split assignments,
 experiment outputs, analysis code, and the manuscript-value reproduction check
 are available at \url{https://github.com/Simhaatt/battery-moo-recursive-forecasting}.
-The version used for this article is archived at Zenodo: \url{https://doi.org/10.5281/zenodo.PLACEHOLDER}.
+The version used for this article is archived at Zenodo: \url{https://doi.org/10.5281/zenodo.22057384}.
 ```
