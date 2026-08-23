@@ -1,0 +1,5 @@
+• NSGA-II reached random-search final mean hypervolume after 71.2 evaluations.
+• Training-seed noise reached 0.21–0.52 percentage points in macro MAPE.
+• Selected NSGA-II model used 92.5% fewer parameters than manual reference.
+• Teacher-forced and recursive evaluations produced different feature rankings.
+• Frozen head-only transfer caused negative transfer on 40 LG M50T cells.

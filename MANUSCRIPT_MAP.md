@@ -22,10 +22,11 @@ The final numerical specification is `manuscript/final_manuscript.tex`. Labels b
 | final paired statistics | `final_paired_tests_holm.csv` | contract check |
 | feature ablation table/figure | `phase1e_*ablation*csv` | `figures/generated/feature_ablation.png` |
 | stress ablation table | `stress_ablation_seed_metrics.csv`, summary | generated CSV/PNG; contract check |
-| modern sequence baselines | `tcn_*.csv`, `mamba_*.csv` | deposited summaries |
+| modern sequence baselines | final T4 `tcn_*.csv`, `mamba_*.csv` | deposited summaries; TCN contract checks; self-contained Kaggle rerun notebook |
 | PINN comparison | `phase4d/5/6/7` extracted summary CSVs | deposited baseline artifacts |
 | grouped-fold ranks/statistics | `phase1_grouped_cv_metrics_raw.csv`, `statistical_*` | deposited exact tests |
 | external transfer protocol/table/figure | `results/transfer/transfer_*` | generated CSV/PNG; contract check |
 
 `configs/expected_values.yaml` is the executable mapping for headline values. Every row is resolved by `src/battery_moo/reproduce.py` and written to `results/reproduction_check.json`.
 
+The exact submitted source bundle, main PDF, supplementary PDF, highlights, graphical abstract, and submitted figure files are preserved under `manuscript/submission/`.

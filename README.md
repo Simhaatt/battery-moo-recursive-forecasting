@@ -70,7 +70,7 @@ The noise panel contains eight configurations × ten seeds = 80 fits. Search-sta
 
 ## 15. Auxiliary experiments
 
-The clean stress ablation used ten matched seeds and found the descriptor worsened macro MAPE by `+0.622698` points in all ten pairs (`p=0.001953`). The Mamba baseline obtained `2.945251 ± 0.208178%`; the TCN obtained `2.088285 ± 0.307598%`. Grouped-fold statistics and PINN artifacts are included under `results/`.
+The clean stress ablation used ten matched seeds and found the descriptor worsened macro MAPE by `+0.622698` points in all ten pairs (`p=0.001953`). The Mamba baseline obtained `2.945251 ± 0.208178%`. The five-seed TCN rerun on a Tesla T4 obtained `1.977483 ± 0.357416%`, with synchronized end-to-end recursive latency of `12.558584 ± 0.033061 ms` per trajectory across the five seed-level means. Grouped-fold statistics and PINN artifacts are included under `results/`.
 
 ## 16. External transfer audit
 
@@ -86,11 +86,11 @@ Forty Kirkaldy 21700 cells contributed 246 later-window evaluation points. The t
 
 ## 19. Provenance and notebooks
 
-Original authored and executed notebooks are preserved unchanged in `notebooks/archive/`. `SOURCE_INVENTORY.csv` records path, byte size, SHA-256 hash, and classification for 587 source-package files. The clean analysis code lives in `src/battery_moo/`; notebooks are historical provenance, not the primary API.
+Original authored and executed notebooks are preserved unchanged in `notebooks/archive/`. `SOURCE_INVENTORY.csv` records path, byte size, SHA-256 hash, and classification for the original 587-file source package. The clean analysis code lives in `src/battery_moo/`; notebooks are historical provenance, not the primary API. The self-contained T4 TCN rerun notebook is provided under `notebooks/kaggle/`.
 
 ## 20. Citation, release, and availability
 
-Release `v1.0.0` is archived at [Zenodo](https://doi.org/10.5281/zenodo.22057384). Cite using `CITATION.cff`. Code is MIT licensed; third-party datasets retain their original terms.
+Release `v1.0.0` is archived at [Zenodo](https://doi.org/10.5281/zenodo.22057384). Release `v1.1.0` synchronizes the final submitted manuscript and the Tesla-T4 TCN evidence. Cite using `CITATION.cff`. Code is MIT licensed; third-party datasets retain their original terms.
 
 ## Repository map
 
@@ -98,6 +98,7 @@ Release `v1.0.0` is archived at [Zenodo](https://doi.org/10.5281/zenodo.22057384
 |---|---|
 | `analysis/reproduce_all.py` | one-command artifact reproduction |
 | `scripts/preprocess_phase2_split.py` | corrected legacy PINN phase-two preprocessing and 180/27/21 cell split |
+| `notebooks/kaggle/ASC_TCN_T4_five_seed_latency.ipynb` | self-contained five-seed Tesla-T4 TCN rerun |
 | `configs/` | immutable data, model, search, and manuscript contracts |
 | `data/splits/` | fixed cell split and grouped-fold assignments |
 | `results/` | authoritative result artifacts and generated tables |
@@ -108,4 +109,4 @@ Release `v1.0.0` is archived at [Zenodo](https://doi.org/10.5281/zenodo.22057384
 
 ## Limitations
 
-The repository cannot remove uncertainties inherited from the data-export provenance. In particular, historical derivations of `k_exp`, SOC/type descriptors, and activation-energy regularization are incompletely recorded. Full GPU reruns can also differ slightly across hardware/library versions. These limitations are enumerated in `KNOWN_ISSUES.md` and are not concealed by the passing artifact-reproduction check.
+The source meanings of `k_exp`, the calendar-ageing SOC setpoint, and ageing-type codes are now documented from the official data structure and preserved preprocessing. The exact producer of the earlier 3,980-row processed archive remains unavailable; the corrected 3,944-row legacy PINN preprocessing revision is retained separately and does not replace the optimization corpus. Full GPU reruns can also differ slightly across hardware/library versions. Remaining limitations are enumerated in `KNOWN_ISSUES.md` and are not concealed by the passing artifact-reproduction check.

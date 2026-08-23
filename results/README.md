@@ -4,3 +4,4 @@ These are authoritative, derived experiment outputs used by the final manuscript
 
 Files in `generated/` are recreated by `python analysis/reproduce_all.py`; source artifacts elsewhere in this directory are treated as immutable inputs. The reproduction command never overwrites the raw inputs.
 
+The canonical `baselines/tcn_*` files are the final five-seed NVIDIA Tesla T4 rerun used by the submitted manuscript. The earlier CPU evidence is preserved under `baselines/archive_cpu_tcn/` and is not used for the final TCN claims.

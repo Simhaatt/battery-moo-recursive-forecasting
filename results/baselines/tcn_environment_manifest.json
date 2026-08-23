@@ -1,0 +1,49 @@
+{
+  "experiment": "five-seed TCN T4 rerun with latency",
+  "python": "3.12.13",
+  "torch": "2.10.0+cu128",
+  "cuda_runtime": "12.8",
+  "cudnn": 91002,
+  "gpu": "Tesla T4",
+  "seeds": [
+    42,
+    52,
+    62,
+    72,
+    82
+  ],
+  "configuration": {
+    "seq_len": 20,
+    "hidden": 96,
+    "lr": 0.0007,
+    "max_epochs": 180,
+    "patience": 35,
+    "batch_size": 512,
+    "weight_decay": 0.0001
+  },
+  "features": [
+    "k_exp",
+    "temperature",
+    "c_rate_chg",
+    "c_rate_dischg",
+    "soc_window",
+    "age_type",
+    "Q0",
+    "Re0",
+    "Rct0"
+  ],
+  "targets": [
+    "Q",
+    "Re"
+  ],
+  "parameters": 119234,
+  "latency_repeats": 100,
+  "latency_warmups": 5,
+  "latency_unit": "milliseconds per evaluable test-cell trajectory",
+  "latency_scope": "synchronized end-to-end recursive rollout: scaling, H2D, batch-one forward, D2H, inverse scaling, clipping, and autoregressive feedback",
+  "test_rows": 276,
+  "test_cells": 10,
+  "evaluable_test_rows": 76,
+  "evaluable_test_cells": 10,
+  "smoke": false
+}

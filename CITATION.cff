@@ -2,8 +2,8 @@ cff-version: 1.2.0
 message: "If you use this software, please cite the repository release and manuscript."
 title: "Multi-Objective Evolutionary Hyperparameter Optimisation for Recursive Battery Degradation Forecasting"
 type: software
-version: 1.0.0
-date-released: 2026-08-22
+version: 1.1.0
+date-released: 2026-08-23
 doi: 10.5281/zenodo.22057384
 authors:
   - family-names: "T. T."

@@ -336,6 +336,102 @@
       "absolute_error": 0.021633420811625115,
       "tolerance": 0.05,
       "status": "PASS"
+    },
+    {
+      "id": "tcn_macro_mape",
+      "metric": "TCN T4 macro MAPE",
+      "label": "TCN T4 macro MAPE",
+      "expected": 1.9774830606701705,
+      "recomputed": 1.9774830606701703,
+      "reproduced": 1.9774830606701703,
+      "difference": -2.220446049250313e-16,
+      "absolute_error": 2.220446049250313e-16,
+      "tolerance": 1e-06,
+      "status": "PASS"
+    },
+    {
+      "id": "tcn_macro_sd",
+      "metric": "TCN T4 macro MAPE SD",
+      "label": "TCN T4 macro MAPE SD",
+      "expected": 0.3574163398879832,
+      "recomputed": 0.3574163398879832,
+      "reproduced": 0.3574163398879832,
+      "difference": 0.0,
+      "absolute_error": 0.0,
+      "tolerance": 1e-06,
+      "status": "PASS"
+    },
+    {
+      "id": "tcn_q_mape",
+      "metric": "TCN T4 capacity MAPE",
+      "label": "TCN T4 capacity MAPE",
+      "expected": 3.0192287002639917,
+      "recomputed": 3.019228700263992,
+      "reproduced": 3.019228700263992,
+      "difference": 4.440892098500626e-16,
+      "absolute_error": 4.440892098500626e-16,
+      "tolerance": 1e-06,
+      "status": "PASS"
+    },
+    {
+      "id": "tcn_re_mape",
+      "metric": "TCN T4 resistance MAPE",
+      "label": "TCN T4 resistance MAPE",
+      "expected": 0.9357374210763483,
+      "recomputed": 0.9357374210763484,
+      "reproduced": 0.9357374210763484,
+      "difference": 1.1102230246251565e-16,
+      "absolute_error": 1.1102230246251565e-16,
+      "tolerance": 1e-06,
+      "status": "PASS"
+    },
+    {
+      "id": "tcn_train_seconds",
+      "metric": "TCN T4 training seconds",
+      "label": "TCN T4 training seconds",
+      "expected": 2.210749980200012,
+      "recomputed": 2.210749980200012,
+      "reproduced": 2.210749980200012,
+      "difference": 0.0,
+      "absolute_error": 0.0,
+      "tolerance": 1e-06,
+      "status": "PASS"
+    },
+    {
+      "id": "tcn_trajectory_latency",
+      "metric": "TCN T4 trajectory latency ms",
+      "label": "TCN T4 trajectory latency ms",
+      "expected": 12.558583858600082,
+      "recomputed": 12.558583858600082,
+      "reproduced": 12.558583858600082,
+      "difference": 0.0,
+      "absolute_error": 0.0,
+      "tolerance": 1e-06,
+      "status": "PASS"
+    },
+    {
+      "id": "tcn_pooled_latency_sd",
+      "metric": "TCN pooled trajectory latency SD ms",
+      "label": "TCN pooled trajectory latency SD ms",
+      "expected": 0.428708136868,
+      "recomputed": 0.42870813686772935,
+      "reproduced": 0.42870813686772935,
+      "difference": -2.7067237340361316e-13,
+      "absolute_error": 2.7067237340361316e-13,
+      "tolerance": 1e-06,
+      "status": "PASS"
+    },
+    {
+      "id": "tcn_parameters",
+      "metric": "TCN parameters",
+      "label": "TCN parameters",
+      "expected": 119234.0,
+      "recomputed": 119234.0,
+      "reproduced": 119234.0,
+      "difference": 0.0,
+      "absolute_error": 0.0,
+      "tolerance": 1e-06,
+      "status": "PASS"
     }
   ],
   "search_integrity": {

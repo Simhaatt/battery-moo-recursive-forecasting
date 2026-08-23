@@ -28,3 +28,11 @@ checks:
   - {id: transfer_cells, label: "External evaluation cells", expected: 40, source: transfer_test, selector: source_pretrained_head_adapted, column: n_cells}
   - {id: transfer_points, label: "External evaluation points", expected: 246, source: transfer_summary, selector: target_only_LSTM_from_scratch, column: n_eval_rows}
   - {id: parameter_reduction, label: "Parameter reduction percent", expected: 92.5, source: derived_parameter_reduction, selector: NSGA-II, tolerance: 0.05}
+  - {id: tcn_macro_mape, label: "TCN T4 macro MAPE", expected: 1.9774830606701705, source: tcn_summary, selector: mean, column: macro_MAPE}
+  - {id: tcn_macro_sd, label: "TCN T4 macro MAPE SD", expected: 0.3574163398879832, source: tcn_summary, selector: std, column: macro_MAPE}
+  - {id: tcn_q_mape, label: "TCN T4 capacity MAPE", expected: 3.0192287002639917, source: tcn_summary, selector: mean, column: Q_MAPE}
+  - {id: tcn_re_mape, label: "TCN T4 resistance MAPE", expected: 0.9357374210763483, source: tcn_summary, selector: mean, column: Re_MAPE}
+  - {id: tcn_train_seconds, label: "TCN T4 training seconds", expected: 2.210749980200012, source: tcn_summary, selector: mean, column: train_seconds}
+  - {id: tcn_trajectory_latency, label: "TCN T4 trajectory latency ms", expected: 12.558583858600082, source: tcn_summary, selector: mean, column: inference_ms_per_trajectory}
+  - {id: tcn_pooled_latency_sd, label: "TCN pooled trajectory latency SD ms", expected: 0.428708136868, source: tcn_latency_repeats, selector: pooled_std, column: ms_per_trajectory}
+  - {id: tcn_parameters, label: "TCN parameters", expected: 119234, source: tcn_seed_metrics, selector: all, column: parameters}

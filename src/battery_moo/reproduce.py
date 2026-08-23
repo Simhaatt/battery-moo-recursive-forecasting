@@ -21,6 +21,17 @@ def _actual(repo: Path, spec: dict) -> float:
     if source == "pooled_count":
         df = pd.read_csv(results / "audit/pooled_pareto_tidy.csv")
         return float(len(df) if selector == "all" else (df["method"] == selector).sum())
+    if source == "tcn_summary":
+        df = pd.read_csv(results / "baselines/tcn_summary.csv", index_col=0)
+        return float(df.loc[selector, spec["column"]])
+    if source == "tcn_seed_metrics":
+        df = pd.read_csv(results / "baselines/tcn_seed_metrics.csv")
+        return float(df[spec["column"]].iloc[0])
+    if source == "tcn_latency_repeats":
+        df = pd.read_csv(results / "baselines/tcn_latency_repeats.csv")
+        if selector == "pooled_std":
+            return float(df[spec["column"]].std(ddof=1))
+        raise KeyError(f"Unknown TCN latency selector: {selector}")
     paths = {
         "final_summary": "final/final_ten_seed_summary.csv",
         "paired_test": "final/final_paired_tests_holm.csv",

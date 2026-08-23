@@ -1,10 +1,9 @@
 # Known issues and unresolved provenance
 
-1. The precise historical derivation of `k_exp` is not fully documented. Deposited audits show it equals neither the raw cycle counter nor the checkup index for all rows.
-2. The provenance and encoding details of SOC-window and age/type descriptors are incomplete in the original notebook trail.
-3. The activation-energy descriptor’s exact prior/regularization provenance, including `E_a,0` and all historical λ values, must be reported from the final manuscript/source record; it should not be reconstructed by inference.
+1. The final optimization results use the archived 3,980-row processed table. Its exact original producer script was not recovered. A corrected, executed 3,944-row preprocessing revision is preserved in `scripts/preprocess_phase2_split.py`; it documents the logic but does not replace the optimization artifact.
+2. The source meanings are resolved: `k_exp` is derived cell-wise from `num_cycles_op`; `age_soc` is a calendar-ageing SOC setpoint (0 means not applicable for non-calendar protocols); and `age_type` codes 1/2/3 denote calendar/cyclic/profile ageing.
+3. The activation-energy feature was fitted on the 180 phase-one training cells. Historical fixed lambda values should not be inferred where the preserved implementation instead used adaptive loss balancing; the final manuscript and supplement are authoritative.
 4. Some historical notebook names use `Rct0`. The measured field is treated publicly as pulse-resistance proxy `Rpulse0`, not electrochemical charge-transfer resistance.
 5. The archived notebook lineage does not provide a complete independent proof against every possible preprocessing leakage path. The immutable cell splits and grouped folds are therefore published for audit.
 6. An older 40-cell transfer artifact reports a source-minus-target difference of −3.2764 points, while the authoritative final evidence pack and manuscript report +6.987501 points. Both are preserved; the latter is the final result. The generating-code divergence remains unresolved.
-7. GPU retraining and latency values may change with hardware, CUDA, PyTorch, and Kaggle scheduling. Artifact-only analysis is the exact reproducibility tier.
-
+7. GPU retraining and latency values may change with hardware, CUDA, PyTorch, and Kaggle scheduling. The final TCN evidence records a Tesla T4, Python 3.12.13, PyTorch 2.10.0+cu128, CUDA 12.8, and cuDNN 9.10.2; artifact-only analysis remains the exact reproducibility tier.

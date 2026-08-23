@@ -32,6 +32,14 @@ Overall status: **PASS**
 | External evaluation cells (40.000000) | 40.000000 | PASS |
 | External evaluation points (246.000000) | 246.000000 | PASS |
 | Parameter reduction percent (92.500000) | 92.521633 | PASS |
+| TCN T4 macro MAPE (1.977483) | 1.977483 | PASS |
+| TCN T4 macro MAPE SD (0.357416) | 0.357416 | PASS |
+| TCN T4 capacity MAPE (3.019229) | 3.019229 | PASS |
+| TCN T4 resistance MAPE (0.935737) | 0.935737 | PASS |
+| TCN T4 training seconds (2.210750) | 2.210750 | PASS |
+| TCN T4 trajectory latency ms (12.558584) | 12.558584 | PASS |
+| TCN pooled trajectory latency SD ms (0.428708) | 0.428708 | PASS |
+| TCN parameters (119234.000000) | 119234.000000 | PASS |
 
 ## Search-integrity checks
 
