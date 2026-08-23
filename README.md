@@ -97,6 +97,7 @@ Release `v1.0.0` is archived at [Zenodo](https://doi.org/10.5281/zenodo.22057384
 | Path | Purpose |
 |---|---|
 | `analysis/reproduce_all.py` | one-command artifact reproduction |
+| `scripts/preprocess_phase2_split.py` | corrected legacy PINN phase-two preprocessing and 180/27/21 cell split |
 | `configs/` | immutable data, model, search, and manuscript contracts |
 | `data/splits/` | fixed cell split and grouped-fold assignments |
 | `results/` | authoritative result artifacts and generated tables |
