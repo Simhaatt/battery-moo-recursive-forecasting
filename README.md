@@ -1,6 +1,6 @@
 # Multi-objective recursive battery-degradation forecasting
 
-[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.22057384.svg)](https://doi.org/10.5281/zenodo.22057384)
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.22067837.svg)](https://doi.org/10.5281/zenodo.22067837)
 
 Publication-quality code and result artifacts for the manuscript submitted to *Applied Soft Computing*. The study combines knowledge-based battery descriptors, recursive LSTM forecasting, and matched-budget multi-objective search with NSGA-II, NSGA-III, and random search.
 
@@ -90,7 +90,7 @@ Original authored and executed notebooks are preserved unchanged in `notebooks/a
 
 ## 20. Citation, release, and availability
 
-Release `v1.0.0` is archived at [Zenodo](https://doi.org/10.5281/zenodo.22057384). Release `v1.1.0` synchronizes the final submitted manuscript and the Tesla-T4 TCN evidence. Cite using `CITATION.cff`. Code is MIT licensed; third-party datasets retain their original terms.
+Release `v1.0.0` remains archived at [Zenodo](https://doi.org/10.5281/zenodo.22057384). The final synchronized release `v1.1.0`, including the submitted manuscript and Tesla-T4 TCN evidence, is archived at [Zenodo](https://doi.org/10.5281/zenodo.22067837). Cite using `CITATION.cff`. Code is MIT licensed; third-party datasets retain their original terms.
 
 ## Repository map
 

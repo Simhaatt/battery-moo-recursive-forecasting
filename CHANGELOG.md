@@ -3,6 +3,7 @@
 ## 1.1.0 — 2026-08-23
 
 - Synchronized the repository with the final Applied Soft Computing submission.
+- Archived this release at Zenodo under DOI `10.5281/zenodo.22067837`.
 - Added the five-seed NVIDIA Tesla T4 TCN rerun, repeated trajectory-latency evidence, environment manifest, runner, and self-contained Kaggle notebook.
 - Promoted the T4 TCN results to the manuscript contract while preserving the earlier CPU artifacts in an archive.
 - Added the corrected legacy phase-two preprocessing and split implementation.
