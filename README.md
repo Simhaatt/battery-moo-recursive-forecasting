@@ -1,6 +1,7 @@
 # Multi-objective recursive battery-degradation forecasting
 
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.22067837.svg)](https://doi.org/10.5281/zenodo.22067837)
+[![reproduce](https://github.com/Simhaatt/battery-moo-recursive-forecasting/actions/workflows/reproduce.yml/badge.svg)](https://github.com/Simhaatt/battery-moo-recursive-forecasting/actions/workflows/reproduce.yml)
 
 Publication-quality code and result artifacts for the manuscript submitted to *Applied Soft Computing*. The study combines knowledge-based battery descriptors, recursive LSTM forecasting, and matched-budget multi-objective search with NSGA-II, NSGA-III, and random search.
 
